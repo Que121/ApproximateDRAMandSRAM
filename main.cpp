@@ -1,7 +1,7 @@
 #include "main.hpp"
 
 u_int8_t BinaryTemp[8] = {0};
-u_int8_t K = 4; // 分隔点
+u_int8_t K = 6; // 分隔点
 
 Size dsize = Size(512, 512);
 
@@ -104,6 +104,7 @@ int main()
   {
     cv::resize(src, dst, dsize, 0, 0, INTER_AREA); // 归一化
     cv::cvtColor(dst, dst, COLOR_RGB2GRAY);        // 灰度化
+    // imshow("grey_dst", dst);
 
     // 读取每个像素点 逐行读取
     for (int row = 0; row < dst.rows; row++)
@@ -114,7 +115,7 @@ int main()
         // fmt::print("{} ", v);
         std::bitset<8> BinaryTemp(v); // 八位二进制转换
 
-#if DEBUG
+#if DEBUG_BITS
         printf("\033[32m"
                "未翻转--> ");
         ShowBinaryTemp(BinaryTemp);
@@ -122,7 +123,7 @@ int main()
 
         ApproximateBinaryTemp(BinaryTemp, K);
 
-#if DEBUG
+#if DEBUG_BITS
         printf("\033[31m"
                "已翻转--> ");
         ShowBinaryTemp(BinaryTemp);
@@ -130,7 +131,7 @@ int main()
 
         DecodeFlipBits(BinaryTemp);
 
-#if DEBUG
+#if DEBUG_BITS
         printf("\033[30m"
                "已解码--> ");
         ShowBinaryTemp(BinaryTemp);
@@ -142,7 +143,7 @@ int main()
 #endif
         dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
       }
-    }
+    } 
 
     namedWindow("dst", WINDOW_AUTOSIZE);
     imshow("dst", dst);
