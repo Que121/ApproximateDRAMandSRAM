@@ -1,7 +1,7 @@
 #include "main.hpp"
 
 u_int8_t BinaryTemp[8] = {0};
-u_int8_t K = 7; // 分隔点
+u_int8_t K = 4; // 分隔点
 
 Size dsize = Size(512, 512);
 
@@ -113,18 +113,34 @@ int main()
         int v = dst.at<uchar>(row, col);
         // fmt::print("{} ", v);
         std::bitset<8> BinaryTemp(v); // 八位二进制转换
+
+#if DEBUG
         printf("\033[32m"
                "未翻转--> ");
         ShowBinaryTemp(BinaryTemp);
+#endif
+
         ApproximateBinaryTemp(BinaryTemp, K);
+
+#if DEBUG
         printf("\033[31m"
                "已翻转--> ");
         ShowBinaryTemp(BinaryTemp);
+#endif
+
         DecodeFlipBits(BinaryTemp);
+
+#if DEBUG
         printf("\033[30m"
                "已解码--> ");
         ShowBinaryTemp(BinaryTemp);
-        dst.at<uchar>(row, col) = BinaryTemp.to_ulong();
+#endif
+
+#if DEBUG_METRICATION
+        printf("%d ", dst.at<uchar>(row, col));
+        printf("%d \n", (int)(BinaryTemp.to_ulong()));
+#endif
+        dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
       }
     }
 

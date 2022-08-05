@@ -11,6 +11,9 @@
 using namespace cv;
 using namespace std;
 
+// #define DEBUG_BITS 1 // 开启调试模式
+#define DEBUG_METRICATION 1   
+
 #define TEST_PATH "/home/quinton/Desktop/ApproximateDRAMandSRAM/test.jpeg"                // 测试路径
 #define TEST_SAVE_PATH "/home/quinton/Desktop/ApproximateDRAMandSRAM/test_processed.jpeg" // 测试保存路径
 
