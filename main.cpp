@@ -1,17 +1,18 @@
 #include "main.hpp"
 
 u_int8_t BinaryTemp[8] = {0};
-u_int8_t K = 6; // 分隔点
+u_int8_t K = 3; // 分隔点
 
 Size dsize = Size(512, 512);
 
 cv::Mat src = cv::imread(TEST_PATH, IMREAD_COLOR);
 cv::Mat dst = Mat ::zeros(dsize, CV_64FC1);
+// cv::Mat dst1 = Mat ::zeros(5, 5, CV_8UC1); //测试数组
 
-// 打印八位二进制数组
+// 打印八位二进制数组 bitset里数字越大位数越高
 void ShowBinaryTemp(std::bitset<8> &BinaryTemp)
 {
-  for (u_int8_t i = 0; i < 8; i++)
+  for (int8_t i = BinaryTemp.size() - 1; i > -1; i--)
   {
     fmt::print("{:x} ", BinaryTemp[i]);
   }
@@ -22,7 +23,7 @@ void ShowBinaryTemp(std::bitset<8> &BinaryTemp)
 u_int8_t CountHighBits(std::bitset<8> &BinaryTemp)
 {
   u_int8_t count = 0;
-  for (u_int8_t i = 0; i < K; i++)
+  for (u_int8_t i = BinaryTemp.size() - 1; i > BinaryTemp.size() - (K + 1); i--)
   {
     if (BinaryTemp.test(i))
     {
@@ -35,7 +36,7 @@ u_int8_t CountHighBits(std::bitset<8> &BinaryTemp)
 // 遍历返回第一个1
 u_int8_t TraverseLowBits(std::bitset<8> &BinaryTemp)
 {
-  for (u_int8_t i = K; i < BinaryTemp.size() - 1; i++)
+  for (u_int8_t i = BinaryTemp.size() - (K + 1); i > 0; i--)
   {
     if (BinaryTemp.test(i))
     {
@@ -53,15 +54,15 @@ void EncodeFlipBits(std::bitset<8> &BinaryTemp)
   {
     // printf("%d \n", (K / 2));
     // printf("%d \n", CountHighBits(BinaryTemp));
-    for (u_int8_t i = 0; i < K; i++)
+    for (u_int8_t i = BinaryTemp.size() - 1; i > BinaryTemp.size() - (K + 1); i--)
     {
       BinaryTemp.flip(i);
       // (BinaryTemp[i] == 1) ? BinaryTemp[i] = 0 : BinaryTemp[i] = 1;
     }
-    BinaryTemp[BinaryTemp.size() - 1] = 0;
+    BinaryTemp[0] = 0;
     return;
   }
-  BinaryTemp[BinaryTemp.size() - 1] = 1;
+  BinaryTemp[0] = 1;
 }
 
 // 补偿截断
@@ -69,7 +70,7 @@ void TruncatedFlipBits(std::bitset<8> &BinaryTemp)
 {
   if (TraverseLowBits(BinaryTemp))
   {
-    for (u_int8_t i = TraverseLowBits(BinaryTemp) + 1; i < BinaryTemp.size() - 1; i++)
+    for (u_int8_t i = TraverseLowBits(BinaryTemp) - 1; i > 0; i--)
     {
       BinaryTemp.reset(i);
     }
@@ -79,9 +80,9 @@ void TruncatedFlipBits(std::bitset<8> &BinaryTemp)
 // 解码 标志位不变
 void DecodeFlipBits(std::bitset<8> &BinaryTemp)
 {
-  if (BinaryTemp[BinaryTemp.size() - 1] == 0)
+  if (BinaryTemp[0] == 0)
   {
-    for (u_int8_t i = 0; i < K; i++)
+    for (u_int8_t i = BinaryTemp.size() - 1; i > BinaryTemp.size() - (K + 1); i--)
     {
       BinaryTemp.flip(i);
     }
@@ -91,17 +92,15 @@ void DecodeFlipBits(std::bitset<8> &BinaryTemp)
 // 近似操作八位二进制
 void ApproximateBinaryTemp(std::bitset<8> &BinaryTemp, u_int8_t K)
 {
-  if (BinaryTemp.any()) // 检查是否有1
-  {
-    EncodeFlipBits(BinaryTemp);
-    TruncatedFlipBits(BinaryTemp);
-  }
+  EncodeFlipBits(BinaryTemp);
+  TruncatedFlipBits(BinaryTemp);
 }
 
 int main()
 {
   if (!src.empty())
   {
+
     cv::resize(src, dst, dsize, 0, 0, INTER_AREA); // 归一化
     cv::cvtColor(dst, dst, COLOR_RGB2GRAY);        // 灰度化
     // imshow("grey_dst", dst);
@@ -121,15 +120,14 @@ int main()
         ShowBinaryTemp(BinaryTemp);
 #endif
 
-        ApproximateBinaryTemp(BinaryTemp, K);
-
+        ApproximateBinaryTemp(BinaryTemp, K); // 近似操作
 #if DEBUG_BITS
         printf("\033[31m"
                "已翻转--> ");
         ShowBinaryTemp(BinaryTemp);
 #endif
 
-        DecodeFlipBits(BinaryTemp);
+        DecodeFlipBits(BinaryTemp); // 解码
 
 #if DEBUG_BITS
         printf("\033[30m"
@@ -143,7 +141,7 @@ int main()
 #endif
         dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
       }
-    } 
+    }
 
     namedWindow("dst", WINDOW_AUTOSIZE);
     imshow("dst", dst);
