@@ -10,6 +10,8 @@ using namespace std;
 #define TEST_PATH "/home/quinton/Desktop/ApproximateDRAMandSRAM/test.jpeg"                // 测试路径
 #define TEST_SAVE_PATH "/home/quinton/Desktop/ApproximateDRAMandSRAM/test_processed.jpeg" // 测试保存路径
 
+DRAM dram;
+
 u_int8_t BinaryTemp[8] = {0};
 u_int8_t K = 3; // 分隔点
 

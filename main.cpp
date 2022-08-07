@@ -43,6 +43,8 @@ int main()
         printf("%d \n", (int)(BinaryTemp.to_ulong()));
 #endif
         dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
+        dram.StorageBits(BinaryTemp);
+        // dram.ShowStorageBits();
       }
     }
 
