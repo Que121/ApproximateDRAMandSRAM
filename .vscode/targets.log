@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Aug  6 08:46:22 2022
+# Make data base, printed on Sun Aug  7 10:26:14 2022
 
 # Variables
 
@@ -49,7 +49,7 @@ VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_langu
 # environment
 _ = /usr/share/code/code
 # environment
-JOURNAL_STREAM = 8:64531
+JOURNAL_STREAM = 8:64761
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile
@@ -67,7 +67,7 @@ XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/d
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
-MANAGERPID = 2252
+MANAGERPID = 2225
 # environment
 ROS_PYTHON_VERSION = 3
 # environment
@@ -91,7 +91,7 @@ CLUTTER_IM_MODULE = fcitx
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/quinton-Blade-14-RZ09-0370:@/tmp/.ICE-unix/2538,unix/quinton-Blade-14-RZ09-0370:/tmp/.ICE-unix/2538
+SESSION_MANAGER = local/quinton-Blade-14-RZ09-0370:@/tmp/.ICE-unix/2507,unix/quinton-Blade-14-RZ09-0370:/tmp/.ICE-unix/2507
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -99,7 +99,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 83c7b9ae3edd4efa92278e3ff7b6d668
+INVOCATION_ID = eb61feb5319f465ab3c142685fe0a539
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -109,7 +109,7 @@ ROS_DISTRO = galactic
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3147
+GIO_LAUNCHED_DESKTOP_FILE_PID = 20009
 # automatic
 %F = $(notdir $%)
 # environment
@@ -121,7 +121,7 @@ PWD = /home/quinton/Desktop/ApproximateDRAMandSRAM
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2493
+SSH_AGENT_PID = 2462
 # environment
 PKG_CONFIG_PATH = :/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig
 # environment
@@ -237,7 +237,7 @@ LC_ADDRESS = zh_CN.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 3147
+VSCODE_PID = 20009
 # variable set hash-table stats:
 # Load=113/1024=11%, Rehash=0, Collisions=20/135=15%
 
@@ -247,9 +247,9 @@ VSCODE_PID = 3147
 
 # Directories
 
-# . (device 66311, inode 7217872): 16 files, no impossibilities.
+# . (device 66311, inode 7217872): 19 files, no impossibilities.
 
-# 16 files, no impossibilities in 1 directories.
+# 19 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -283,7 +283,6 @@ makefile:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 
 # Not a target:
 GNUmakefile:
@@ -295,17 +294,18 @@ GNUmakefile:
 # files hash-table stats:
 # Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
 # VPATH Search Paths
+ 
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 24 / storage = 254 B / avg = 10 B
-# current buf: size = 8162 B / used = 254 B / count = 24 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 27 / storage = 298 B / avg = 11 B
+# current buf: size = 8162 B / used = 298 B / count = 27 / avg = 11 B
 
-# strcache performance: lookups = 27 / hit rate = 11%
+# strcache performance: lookups = 30 / hit rate = 10%
 # hash-table stats:
-# Load=24/8192=0%, Rehash=0, Collisions=1/27=4%
-# Finished Make data base on Sat Aug  6 08:46:22 2022
+# Load=27/8192=0%, Rehash=0, Collisions=1/30=3%
+# Finished Make data base on Sun Aug  7 10:26:14 2022
 
  

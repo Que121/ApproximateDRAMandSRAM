@@ -1,0 +1,11 @@
+#pragma once
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <math.h>
+#include <iostream>
+#include <string>
+#include <fmt/core.h>
+#include <fmt/format.h>
+#include <bitset>
+#include <vector>

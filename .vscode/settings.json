@@ -53,6 +53,7 @@
         "ratio": "cpp",
         "cstdarg": "c",
         "bitset": "c",
-        "*.ipp": "c"
+        "*.ipp": "c",
+        "numeric": "cpp"
     }
 }

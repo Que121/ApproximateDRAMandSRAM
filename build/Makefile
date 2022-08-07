@@ -123,6 +123,33 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+DRAMandSRAM.o: DRAMandSRAM.cpp.o
+
+.PHONY : DRAMandSRAM.o
+
+# target to build an object file
+DRAMandSRAM.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/DRAMandSRAM.cpp.o
+.PHONY : DRAMandSRAM.cpp.o
+
+DRAMandSRAM.i: DRAMandSRAM.cpp.i
+
+.PHONY : DRAMandSRAM.i
+
+# target to preprocess a source file
+DRAMandSRAM.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/DRAMandSRAM.cpp.i
+.PHONY : DRAMandSRAM.cpp.i
+
+DRAMandSRAM.s: DRAMandSRAM.cpp.s
+
+.PHONY : DRAMandSRAM.s
+
+# target to generate assembly for a file
+DRAMandSRAM.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/DRAMandSRAM.cpp.s
+.PHONY : DRAMandSRAM.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... DRAMandSRAM.o"
+	@echo "... DRAMandSRAM.i"
+	@echo "... DRAMandSRAM.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
