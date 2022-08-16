@@ -24,6 +24,9 @@ int main()
 #endif
 
         ApproximateBinaryTemp(BinaryTemp, K); // 近似操作
+        dram.StorageBits(BinaryTemp);
+
+        // dram.WriteExcelBits((string)(EXCEL_NAME));
 #if DEBUG_BITS
         printf("\033[31m"
                "已翻转--> ");
@@ -43,10 +46,11 @@ int main()
         printf("%d \n", (int)(BinaryTemp.to_ulong()));
 #endif
         dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
-        dram.StorageBits(BinaryTemp);
-        // dram.ShowStorageBits();
       }
     }
+    // dram.ShowStorageBits();
+    // dram.ShowGroupsBits();
+    fmt::print("高位比特数：{:d} 总比特数：{:d} 高位比特占比：{:f}", dram.CountHighBits(), dram.GetAllBits(), dram.GetHighBitsPercentage());
 
     namedWindow("dst", WINDOW_AUTOSIZE);
     imshow("dst", dst);
