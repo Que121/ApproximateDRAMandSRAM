@@ -4,7 +4,6 @@
 using namespace cv;
 using namespace std;
 
-
 DRAM dram;
 
 u_int8_t BinaryTemp[8] = {0};

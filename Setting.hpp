@@ -23,4 +23,6 @@
 
 #define TEST_PATH "/home/quinton/Desktop/ApproximateDRAMandSRAM/test.jpeg"                // 测试路径
 #define TEST_SAVE_PATH "/home/quinton/Desktop/ApproximateDRAMandSRAM/test_processed.jpeg" // 测试保存路径
-#define EXCEL_NAME "DRAM_Bits.csv"                                                        // excel导出路径
+#define EXCEL_NAME "/home/quinton/Desktop/ApproximateDRAMandSRAM/DRAM_Bits.csv"           // excel导出路径
+#define BITS_8 8                                                                          // 定义使用的bit位数
+#define KB_TO_BYTE 1024                                                                   // 1KB=1024Byte

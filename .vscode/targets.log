@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug 16 11:43:17 2022
+# Make data base, printed on Wed Aug 17 20:30:16 2022
 
 # Variables
 
@@ -30,6 +30,8 @@ XDG_SESSION_CLASS = user
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
+# environment
+IM_CONFIG_PHASE = 1
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
@@ -43,11 +45,11 @@ CURDIR := /home/quinton/Desktop/ApproximateDRAMandSRAM
 # makefile
 SHELL = /bin/sh
 # environment
-VTE_VERSION = 6003
-# environment
 VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"1d735750dbb1b9066c7513078396ba0f.zh-cn","_translationsConfigFile":"/home/quinton/.config/Code/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/tcf.json","_cacheRoot":"/home/quinton/.config/Code/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn","_resolvedLanguagePackCoreLocation":"/home/quinton/.config/Code/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/3b889b090b5ad5793f524b5d1d39fda662b96a2a","_corruptedFile":"/home/quinton/.config/Code/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:60656
+_ = /usr/share/code/code
+# environment
+JOURNAL_STREAM = 8:53243
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile
@@ -55,9 +57,7 @@ MAKEFILE_LIST :=
 # automatic
 @F = $(notdir $@)
 # environment
-IM_CONFIG_PHASE = 1
-# environment
-QT_IM_MODULE = fcitx
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # environment
 USERNAME = quinton
 # environment
@@ -65,33 +65,33 @@ MAKELEVEL := 0
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=78a14bd7a4a684e1def8c29b62faf526
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
-_ = /usr/bin/code
-# environment
-MANAGERPID = 2124
+MANAGERPID = 1914
 # environment
 ROS_PYTHON_VERSION = 3
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
-LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LS_COLORS = 
 # environment
 LC_NAME = zh_CN.UTF-8
 # environment
-VSCODE_CWD = /home/quinton/Desktop/ApproximateDRAMandSRAM
+VSCODE_CWD = /home/quinton
 # environment
-CLUTTER_IM_MODULE = fcitx
+GSETTINGS_SCHEMA_DIR = /home/quinton/data
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-NO_PROXY = localhost,127.0.0.0/8,::1
+PATH = /home/quinton/.local/bin:/usr/local/cuda-10.1/bin:/opt/ros/galactic/bin:/home/quinton/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/quinton//gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/bin
 # environment
 XDG_SESSION_DESKTOP = ubuntu
 # environment
+CLUTTER_IM_MODULE = fcitx
+# environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/quinton-Blade-14-RZ09-0370:@/tmp/.ICE-unix/2404,unix/quinton-Blade-14-RZ09-0370:/tmp/.ICE-unix/2404
+SESSION_MANAGER = local/quinton-Blade-14-RZ09-0370:@/tmp/.ICE-unix/2323,unix/quinton-Blade-14-RZ09-0370:/tmp/.ICE-unix/2323
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -99,7 +99,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 9741934eaddc4096ad61ceb056530a28
+INVOCATION_ID = ab8f54bd50034b249d71a536e467ed99
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -108,12 +108,12 @@ ROS_LOCALHOST_ONLY = 0
 ROS_DISTRO = galactic
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2939
 # automatic
 %F = $(notdir $%)
 # environment
-HTTPS_PROXY = http://127.0.0.1:7890/
-# environment
-no_proxy = localhost,127.0.0.0/8,::1
+DISPLAY = :1
 # environment
 GTK_IM_MODULE = fcitx
 # environment
@@ -121,7 +121,7 @@ PWD = /home/quinton/Desktop/ApproximateDRAMandSRAM
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2359
+SSH_AGENT_PID = 2278
 # environment
 PKG_CONFIG_PATH = :/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig
 # environment
@@ -139,8 +139,6 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 AMENT_PREFIX_PATH = /opt/ros/galactic
 # environment
-VSCODE_CLI = 1
-# environment
 VSCODE_CODE_CACHE_PATH = /home/quinton/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # environment
 LOGNAME = quinton
@@ -149,8 +147,6 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 +F = $(notdir $+)
 # environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
-# environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # environment
 GNOME_DESKTOP_SESSION_ID = this-is-deprecated
@@ -158,16 +154,14 @@ GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
 LC_TIME = zh_CN.UTF-8
-# environment
-COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-PATH = /usr/local/cuda-10.1/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/quinton//gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/bin
+QT_IM_MODULE = fcitx
 # environment
-SHLVL = 1
+SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # default
@@ -211,11 +205,7 @@ GDK_BACKEND = x11
 # environment
 LC_PAPER = zh_CN.UTF-8
 # environment
-HTTP_PROXY = http://127.0.0.1:7890/
-# environment
 QT_ACCESSIBILITY = 1
-# environment
-DISPLAY = :1
 # default
 MAKEFILES := 
 # environment
@@ -223,21 +213,13 @@ LC_NUMERIC = zh_CN.UTF-8
 # automatic
 <F = $(notdir $<)
 # environment
-https_proxy = http://127.0.0.1:7890/
-# environment
 LC_MEASUREMENT = zh_CN.UTF-8
 # environment
 LC_ALL = C
 # environment
-DBUS_STARTER_BUS_TYPE = session
-# environment
 QT4_IM_MODULE = fcitx
-# environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/cd19a8df_98a0_4f6d_b71a_46b89404fc9a
 # automatic
 ^F = $(notdir $^)
-# environment
-GNOME_TERMINAL_SERVICE = :1.121
 # default
 SUFFIXES := 
 # environment
@@ -251,19 +233,13 @@ LC_IDENTIFICATION = zh_CN.UTF-8
 # default
 .RECIPEPREFIX := 
 # environment
-http_proxy = http://127.0.0.1:7890/
-# environment
 LC_ADDRESS = zh_CN.UTF-8
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_PID = 37963
-# environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=78a14bd7a4a684e1def8c29b62faf526
+VSCODE_PID = 2939
 # variable set hash-table stats:
-# Load=125/1024=12%, Rehash=0, Collisions=23/147=16%
+# Load=113/1024=11%, Rehash=0, Collisions=20/135=15%
 
 # Pattern-specific Variable Values
 
@@ -288,7 +264,6 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
- 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
@@ -313,6 +288,7 @@ makefile:
 GNUmakefile:
 #  Implicit rule search has been done.
 #  File does not exist.
+ 
 #  File has been updated.
 #  Failed to be updated.
 
@@ -330,6 +306,6 @@ GNUmakefile:
 # strcache performance: lookups = 30 / hit rate = 10%
 # hash-table stats:
 # Load=27/8192=0%, Rehash=0, Collisions=1/30=3%
-# Finished Make data base on Tue Aug 16 11:43:18 2022
+# Finished Make data base on Wed Aug 17 20:30:16 2022
 
  

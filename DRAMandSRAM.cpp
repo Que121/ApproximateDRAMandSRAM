@@ -45,6 +45,7 @@ u_int32_t DRAM::GetAllBits()
 
 void DRAM::WriteExcelBits(const cv::String &excelName)
 {
+  u_int32_t count = 0;
   vector<vector<u_int8_t>>::iterator t;
   vector<u_int8_t>::iterator l;
   ofstream opt;
@@ -53,7 +54,7 @@ void DRAM::WriteExcelBits(const cv::String &excelName)
   {
     for (l = (*t).begin(); l != (*t).end(); l++)
     {
-      opt << *l << endl;
+      opt << *l;
     }
   }
   opt.close();
@@ -79,7 +80,7 @@ u_int32_t DRAM::CountHighBits()
 
 double DRAM::GetHighBitsPercentage()
 {
-  return  (double)(CountHighBits())/(double)(GetAllBits());
+  return (double)(CountHighBits()) / (double)(GetAllBits());
 }
 
 SRAM::SRAM(/* args */)
