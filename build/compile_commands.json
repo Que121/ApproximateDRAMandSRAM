@@ -1,12 +1,12 @@
 [
 {
   "directory": "/home/quinton/Desktop/ApproximateDRAMandSRAM/build",
-  "command": "/usr/bin/clang++   -isystem /usr/local/include/opencv4  -g   -o CMakeFiles/main.dir/DRAMandSRAM.cpp.o -c /home/quinton/Desktop/ApproximateDRAMandSRAM/DRAMandSRAM.cpp",
+  "command": "/usr/bin/clang++   -isystem /usr/local/include/opencv4  -g   -std=gnu++2a -o CMakeFiles/main.dir/DRAMandSRAM.cpp.o -c /home/quinton/Desktop/ApproximateDRAMandSRAM/DRAMandSRAM.cpp",
   "file": "/home/quinton/Desktop/ApproximateDRAMandSRAM/DRAMandSRAM.cpp"
 },
 {
   "directory": "/home/quinton/Desktop/ApproximateDRAMandSRAM/build",
-  "command": "/usr/bin/clang++   -isystem /usr/local/include/opencv4  -g   -o CMakeFiles/main.dir/main.cpp.o -c /home/quinton/Desktop/ApproximateDRAMandSRAM/main.cpp",
+  "command": "/usr/bin/clang++   -isystem /usr/local/include/opencv4  -g   -std=gnu++2a -o CMakeFiles/main.dir/main.cpp.o -c /home/quinton/Desktop/ApproximateDRAMandSRAM/main.cpp",
   "file": "/home/quinton/Desktop/ApproximateDRAMandSRAM/main.cpp"
 }
 ]

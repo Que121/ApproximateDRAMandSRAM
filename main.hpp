@@ -5,11 +5,12 @@ using namespace cv;
 using namespace std;
 
 DRAM dram;
+SRAM sram;
+
+cv::Size dsize = Size(512, 512); // 图像大小
 
 u_int8_t BinaryTemp[8] = {0};
 u_int8_t K = 3; // 分隔点
-
-Size dsize = Size(512, 512);
 
 cv::Mat src = cv::imread(TEST_PATH, IMREAD_COLOR);
 cv::Mat dst = Mat ::zeros(dsize, CV_64FC1);

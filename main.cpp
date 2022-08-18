@@ -24,9 +24,9 @@ int main()
 #endif
 
         ApproximateBinaryTemp(BinaryTemp, K); // 近似操作
-        dram.StorageBits(BinaryTemp);
-
-        
+        // dram.StorageBits(BinaryTemp);
+        // sram.StorageBits(BinaryTemp,sram.SRAM_storageSizeByte);
+        sram.CalculateFlipBits(BinaryTemp, sram.SRAM_storageSizeByte);
 #if DEBUG_BITS
         printf("\033[31m"
                "已翻转--> ");
@@ -48,11 +48,15 @@ int main()
         dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
       }
     }
+    sram.ShowStorageBits();
     // dram.ShowStorageBits();
     // dram.ShowGroupsBits();
-    dram.WriteExcelBits((string)(EXCEL_NAME));
-    fmt::print("高位比特数：{:d} 总比特数：{:d} 高位比特占比：{:f}", dram.CountHighBits(), dram.GetAllBits(), dram.GetHighBitsPercentage());
-    
+    // dram.WriteExcelBits((string)(EXCEL_NAME));
+    // fmt::print("DRAM高位比特数：{:d} DRAM总比特数：{:d} DRAM高位比特占比：{:f}",
+    //            dram.CountHighBits(), dram.GetAllBits(), dram.GetHighBitsPercentage());
+    fmt::print("SRAM的Byte数:{:d} SRAM总比特数:{:d} ",
+               sram.ShowGroupsBits(), sram.GetAllBits());
+
     namedWindow("dst", WINDOW_AUTOSIZE);
     imshow("dst", dst);
     imwrite(TEST_SAVE_PATH, dst);

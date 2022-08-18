@@ -26,3 +26,5 @@
 #define EXCEL_NAME "/home/quinton/Desktop/ApproximateDRAMandSRAM/DRAM_Bits.csv"           // excel导出路径
 #define BITS_8 8                                                                          // 定义使用的bit位数
 #define KB_TO_BYTE 1024                                                                   // 1KB=1024Byte
+#define IMAGE_WIDTH 512                                                                   // 输入图像宽
+#define IMAGE_HEIGH 512                                                                   // 输入图像高
