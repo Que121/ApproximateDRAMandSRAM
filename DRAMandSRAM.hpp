@@ -40,8 +40,8 @@ public:
   void ShowStorageBits();                                                              // 打印SRAM存储的比特
   void StorageBits(std::bitset<8> &BinaryTemp, u_int32_t storageSizecount);            // SRSM比特
   double CalculateFlipProbability();                                                   // 计算翻转概率
-  u_int32_t CalculateFlipBits(std::bitset<8> &BinaryTemp, u_int32_t storageSizecount); // 计算翻转比特数
+  u_int32_t CalculateFlipBits(std::bitset<8> &BinaryTemp, u_int32_t storageSizecount); // 计算翻转比特数(弃用)
   u_int32_t ShowGroupsBits();                                                          // 打印数据组数
   u_int32_t GetAllBits();                                                              // 比特总数
-  void CalculateFlipBits(u_int32_t &StorageLoopTimes, u_int32_t &storageBitsFlag);     // 计算翻转概率无返回值（test使用）
+  void CalculateFlipBits(u_int32_t &StorageLoopTimes, u_int32_t &storageBitsFlag);     // 计算翻转概率无返回值
 };
