@@ -54,6 +54,7 @@
         "cstdarg": "c",
         "bitset": "c",
         "*.ipp": "c",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "list": "c"
     }
 }

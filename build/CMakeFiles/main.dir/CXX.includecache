@@ -52,16 +52,6 @@ cstdlib
 streambuf
 -
 
-/home/quinton/Desktop/ApproximateDRAMandSRAM/main.cpp
-main.hpp
-/home/quinton/Desktop/ApproximateDRAMandSRAM/main.hpp
-
-/home/quinton/Desktop/ApproximateDRAMandSRAM/main.hpp
-Setting.hpp
-/home/quinton/Desktop/ApproximateDRAMandSRAM/Setting.hpp
-DRAMandSRAM.hpp
-/home/quinton/Desktop/ApproximateDRAMandSRAM/DRAMandSRAM.hpp
-
 /usr/local/include/opencv4/opencv2/core.hpp
 opencv2/core/cvdef.h
 /usr/local/include/opencv4/opencv2/opencv2/core/cvdef.h

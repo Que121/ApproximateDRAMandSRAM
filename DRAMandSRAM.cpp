@@ -134,29 +134,67 @@ u_int32_t SRAM::GetAllBits()
 u_int32_t SRAM::CalculateFlipBits(std::bitset<8> &BinaryTemp, u_int32_t storageSizecount)
 {
   u_int32_t count = 0;
-  StorageBits(BinaryTemp, storageSizecount);
-  vector<vector<u_int8_t>>::iterator t = SRAM_Bits.begin();
-  vector<vector<u_int8_t>>::iterator t_last = SRAM_LastBits.begin();
-  while ((t != SRAM_Bits.end()) && (t_last != SRAM_Bits.end()))
+  u_int32_t storageBitsFlag = storageSizecount;
+  // StorageBits(BinaryTemp, storageBitsFlag); // 正常
+  if (SRAM_Bits.size() == storageBitsFlag)
   {
-    vector<u_int8_t>::iterator l = (*t).begin();
-    vector<u_int8_t>::iterator l_last = (*t_last).begin();
-    while ((l != (*t).end()) && (l_last != (*t_last).end()))
+    vector<vector<u_int8_t>>::iterator t;
+    vector<vector<u_int8_t>>::iterator t_last = SRAM_LastBits.begin();
+    vector<u_int8_t>::iterator l;
+    vector<u_int8_t>::iterator l_last;
+    for (t = SRAM_Bits.begin(), t_last = SRAM_LastBits.begin();
+         (t != SRAM_Bits.end()) && (t_last != SRAM_LastBits.end()); t++, t_last++)
     {
-      if ((*l) != (*l_last))
+      for (l = (*t).begin(), l_last = (*t_last).begin();
+           (l != (*t).end()) && (l_last != (*t_last).end()); l++)
       {
-        count++;
+        if ((*l) != (*l_last))
+        {
+          count++;
+        }
       }
     }
+    SRAM_LastBits = SRAM_Bits;
+    SRAM_Bits.clear();
+    // fmt::print("{:d} ", count);
   }
-  SRAM_LastBits = SRAM_Bits;
-  SRAM_Bits.clear();
-  fmt::print("{:d} ", count);
   return count;
 }
 
-void SRAM::CalculateFlipProbability(std::bitset<8> &BinaryTemp, u_int32_t storageSizecount)
+double SRAM::CalculateFlipProbability()
 {
-  double FlipProbability = 0;
- 
+  return (double)(SRAM_FlipTimes) / (double)(SRAM_Bits.size() * BITS_8);
+}
+
+void SRAM::CalculateFlipBits(u_int32_t &StorageLoopTimes, u_int32_t &storageBitsFlag)
+{
+  if (SRAM_Bits.size() == storageBitsFlag)
+  {
+    u_int32_t count = 0;
+    vector<vector<u_int8_t>>::iterator t;
+    vector<vector<u_int8_t>>::iterator t_last = SRAM_LastBits.begin();
+    vector<u_int8_t>::iterator l;
+    vector<u_int8_t>::iterator l_last;
+    for (t = SRAM_Bits.begin(), t_last = SRAM_LastBits.begin();
+         (t != SRAM_Bits.end()) && (t_last != SRAM_LastBits.end()); t++, t_last++)
+    {
+      for (l = (*t).begin(), l_last = (*t_last).begin();
+           (l != (*t).end()) && (l_last != (*t_last).end()); l++)
+      {
+        if ((*l) != (*l_last))
+        {
+          count++;
+        }
+      }
+    }
+    SRAM_FlipTimes = count;
+    fmt::print("翻转个数：{:d} 总比特：{:d}\n第{:d}次存储的翻转概率为：{:f}\n", SRAM_FlipTimes, SRAM_Bits.size() * BITS_8,
+               StorageLoopTimes_flag, CalculateFlipProbability());
+    if (StorageLoopTimes_flag < StorageLoopTimes)
+    {
+      SRAM_LastBits = SRAM_Bits;
+      SRAM_Bits.clear();
+    }
+    StorageLoopTimes_flag++;
+  }
 }

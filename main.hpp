@@ -102,3 +102,152 @@ void ApproximateBinaryTemp(std::bitset<8> &BinaryTemp, u_int8_t K)
   EncodeFlipBits(BinaryTemp);
   TruncatedFlipBits(BinaryTemp);
 }
+
+// DRAM近似存储
+void DRAM_ApproximateStorage()
+{
+  if (!src.empty())
+  {
+    cv::resize(src, dst, dsize, 0, 0, INTER_AREA); // 归一化
+    cv::cvtColor(dst, dst, COLOR_RGB2GRAY);        // 灰度化
+    for (int row = 0; row < dst.rows; row++)
+    {
+      for (int col = 0; col < dst.cols; col++)
+      {
+        int v = dst.at<uchar>(row, col);
+        std::bitset<8> BinaryTemp(v);         // 八位二进制转换
+        ApproximateBinaryTemp(BinaryTemp, K); // 近似操作
+        dram.StorageBits(BinaryTemp);
+        DecodeFlipBits(BinaryTemp); // 解码
+        dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
+      }
+    }
+    // dram.ShowStorageBits();
+    // dram.ShowGroupsBits();
+    // dram.WriteExcelBits((string)(EXCEL_NAME));
+    // fmt::print("DRAM高位比特数：{:d} DRAM总比特数：{:d} DRAM高位比特占比：{:f}",
+    //            dram.CountHighBits(), dram.GetAllBits(), dram.GetHighBitsPercentage());
+    namedWindow("dst", WINDOW_AUTOSIZE);
+    imshow("dst", dst);
+    imwrite(TEST_SAVE_PATH, dst);
+    waitKey(0);
+  }
+}
+
+// SRAM近似存储
+void SRAM_ApproximateStorage()
+{
+  u_int32_t StorageLoopTimes = ceil((double)(IMAGE_WIDTH * IMAGE_WIDTH) / (double)(sram.SRAM_storageSizeByte)); // 存储次数
+  u_int32_t storageSizeFmod = (IMAGE_WIDTH * IMAGE_WIDTH) % (sram.SRAM_storageSizeByte);
+  // fmt::print("{:d} {:d}", StorageLoopTimes, storageSizeFmod); //right
+  if (!src.empty())
+  {
+    cv::resize(src, dst, dsize, 0, 0, INTER_AREA); // 归一化
+    cv::cvtColor(dst, dst, COLOR_RGB2GRAY);        // 灰度化
+    for (int row = 0; row < dst.rows; row++)
+    {
+      for (int col = 0; col < dst.cols; col++)
+      {
+        int v = dst.at<uchar>(row, col);
+        std::bitset<8> BinaryTemp(v);         // 八位二进制转换
+        ApproximateBinaryTemp(BinaryTemp, K); // 近似操作
+
+        if (sram.StorageLoopTimes_flag < StorageLoopTimes) // 非最后一次循环情况
+        {
+          // fmt::print("{:d}", storageSizeFmod); // 正常
+          if (sram.SRAM_Bits.size() < sram.SRAM_storageSizeByte)
+          {
+            // fmt::print("{:d}", storageSizeFmod); // 正常
+            sram.StorageBits(BinaryTemp, sram.SRAM_storageSizeByte);
+            sram.CalculateFlipBits(StorageLoopTimes, sram.SRAM_storageSizeByte);
+          }
+        }
+        else if (sram.StorageLoopTimes_flag == StorageLoopTimes) //最后一次循环
+        {
+          if (storageSizeFmod == 0)
+          {
+            if (sram.SRAM_Bits.size() < sram.SRAM_storageSizeByte)
+            {
+              sram.StorageBits(BinaryTemp, sram.SRAM_storageSizeByte);
+              sram.CalculateFlipBits(StorageLoopTimes, sram.SRAM_storageSizeByte);
+            }
+          }
+          else
+          {
+            if (sram.SRAM_Bits.size() < storageSizeFmod)
+            {
+              sram.StorageBits(BinaryTemp, storageSizeFmod);
+              sram.CalculateFlipBits(StorageLoopTimes, storageSizeFmod);
+            }
+          }
+        }
+
+        DecodeFlipBits(BinaryTemp); // 解码
+        dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
+      }
+    }
+    namedWindow("dst", WINDOW_AUTOSIZE);
+    imshow("dst", dst);
+    imwrite(TEST_SAVE_PATH, dst);
+    waitKey(0);
+  }
+}
+
+// 近似存储测试
+void ApproximateStorageDebug()
+{
+  if (!src.empty())
+  {
+    cv::resize(src, dst, dsize, 0, 0, INTER_AREA); // 归一化
+    cv::cvtColor(dst, dst, COLOR_RGB2GRAY);        // 灰度化
+    // imshow("grey_dst", dst);
+
+    // 读取每个像素点 逐行读取
+    for (int row = 0; row < dst.rows; row++)
+    {
+      for (int col = 0; col < dst.cols; col++)
+      {
+        int v = dst.at<uchar>(row, col);
+        // fmt::print("{} ", v);
+        std::bitset<8> BinaryTemp(v); // 八位二进制转换
+
+#if DEBUG_BITS
+        printf("\033[32m"
+               "未翻转--> ");
+        ShowBinaryTemp(BinaryTemp);
+#endif
+
+        ApproximateBinaryTemp(BinaryTemp, K); // 近似操作
+                                              // dram.StorageBits(BinaryTemp);
+#if DEBUG_BITS
+        printf("\033[31m"
+               "已翻转--> ");
+        ShowBinaryTemp(BinaryTemp);
+#endif
+
+        DecodeFlipBits(BinaryTemp); // 解码
+
+#if DEBUG_BITS
+        printf("\033[30m"
+               "已解码--> ");
+        ShowBinaryTemp(BinaryTemp);
+#endif
+
+#if DEBUG_METRICATION
+        printf("%d ", dst.at<uchar>(row, col));
+        printf("%d \n", (int)(BinaryTemp.to_ulong()));
+#endif
+        dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
+      }
+    }
+    // dram.ShowStorageBits();
+    // dram.ShowGroupsBits();
+    // dram.WriteExcelBits((string)(EXCEL_NAME));
+    // fmt::print("DRAM高位比特数：{:d} DRAM总比特数：{:d} DRAM高位比特占比：{:f}",
+    //            dram.CountHighBits(), dram.GetAllBits(), dram.GetHighBitsPercentage());
+    namedWindow("dst", WINDOW_AUTOSIZE);
+    imshow("dst", dst);
+    imwrite(TEST_SAVE_PATH, dst);
+    waitKey(0);
+  }
+}
