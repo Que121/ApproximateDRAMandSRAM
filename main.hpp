@@ -7,7 +7,7 @@ using namespace std;
 DRAM dram;
 SRAM sram;
 
-cv::Size dsize = Size(512, 512); // 图像大小
+cv::Size dsize = Size(IMAGE_WIDTH, IMAGE_HEIGH); // 图像大小
 
 u_int8_t BinaryTemp[8] = {0};
 u_int8_t K = 3; // 分隔点
@@ -15,6 +15,43 @@ u_int8_t K = 3; // 分隔点
 cv::Mat src = cv::imread(TEST_PATH, IMREAD_COLOR);
 cv::Mat dst = Mat ::zeros(dsize, CV_64FC1);
 // cv::Mat dst1 = Mat ::zeros(5, 5, CV_8UC1); //测试数组
+
+// 打开raw格式图片
+void openRawData()
+{
+  std::ifstream fin;
+  fin.open(RAW_IMAGE_PATH, std::ios::binary); // binary读取模式
+  if (!fin)
+  {
+    std::cerr << "open failed: " << RAW_IMAGE_PATH << std::endl;
+  }
+  fin.seekg(0, fin.end);    // seek函数会把标记移动到输入流的结尾
+  int length = fin.tellg(); // tell会告知整个输入流（从开头到标记）的字节数量
+  fin.seekg(0, fin.beg);    // 移动到流的开始位置
+  char *buffer = new char[length];
+  fin.read(buffer, length); // read函数读取（拷贝）流中的length各字节到buffer
+  cv::Mat rawImage(cv::Size(IMAGE_WIDTH, IMAGE_HEIGH), CV_8UC1, buffer);
+  cv::imshow("rawImage", rawImage);
+  cv::waitKey();
+}
+
+// 返回raw格式照片
+cv::Mat returnRawData()
+{
+  std::ifstream fin;
+  fin.open(RAW_IMAGE_PATH, std::ios::binary); // binary读取模式
+  if (!fin)
+  {
+    std::cerr << "open failed: " << RAW_IMAGE_PATH << std::endl;
+  }
+  fin.seekg(0, fin.end);
+  int length = fin.tellg();
+  fin.seekg(0, fin.beg);
+  char *buffer = new char[length];
+  fin.read(buffer, length);
+  cv::Mat rawImage(cv::Size(IMAGE_WIDTH, IMAGE_HEIGH), CV_8UC1, buffer);
+  return rawImage;
+}
 
 // 打印八位二进制数组 bitset里数字越大位数越高
 void ShowBinaryTemp(std::bitset<8> &BinaryTemp)

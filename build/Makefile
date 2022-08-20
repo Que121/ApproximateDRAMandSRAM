@@ -177,6 +177,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+outputQualityEvaluate.o: outputQualityEvaluate.cpp.o
+
+.PHONY : outputQualityEvaluate.o
+
+# target to build an object file
+outputQualityEvaluate.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/outputQualityEvaluate.cpp.o
+.PHONY : outputQualityEvaluate.cpp.o
+
+outputQualityEvaluate.i: outputQualityEvaluate.cpp.i
+
+.PHONY : outputQualityEvaluate.i
+
+# target to preprocess a source file
+outputQualityEvaluate.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/outputQualityEvaluate.cpp.i
+.PHONY : outputQualityEvaluate.cpp.i
+
+outputQualityEvaluate.s: outputQualityEvaluate.cpp.s
+
+.PHONY : outputQualityEvaluate.s
+
+# target to generate assembly for a file
+outputQualityEvaluate.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/outputQualityEvaluate.cpp.s
+.PHONY : outputQualityEvaluate.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... outputQualityEvaluate.o"
+	@echo "... outputQualityEvaluate.i"
+	@echo "... outputQualityEvaluate.s"
 .PHONY : help
 
 

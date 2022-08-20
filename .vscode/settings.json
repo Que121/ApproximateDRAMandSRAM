@@ -55,6 +55,7 @@
         "bitset": "c",
         "*.ipp": "c",
         "numeric": "cpp",
-        "list": "c"
+        "list": "c",
+        "outputqualityevaluate.hpp": "c"
     }
 }
