@@ -1,18 +1,24 @@
 #include "Setting.hpp"
 #include "DRAMandSRAM.hpp"
+#include "outputQualityEvaluate.hpp"
 
 using namespace cv;
 using namespace std;
 
+cv::Mat returnRawData(); // 前置函数声明
+
 DRAM dram;
 SRAM sram;
+_DCT dct;
+_IDCT idct;
 
 cv::Size dsize = Size(IMAGE_WIDTH, IMAGE_HEIGH); // 图像大小
 
 u_int8_t BinaryTemp[8] = {0};
 u_int8_t K = 3; // 分隔点
 
-cv::Mat src = cv::imread(TEST_PATH, IMREAD_COLOR);
+// cv::Mat src = cv::imread(TEST_PATH, IMREAD_COLOR); // jpeg格式
+cv::Mat src = returnRawData(); // raw格式
 cv::Mat dst = Mat ::zeros(dsize, CV_64FC1);
 // cv::Mat dst1 = Mat ::zeros(5, 5, CV_8UC1); //测试数组
 
@@ -286,5 +292,13 @@ void ApproximateStorageDebug()
     imshow("dst", dst);
     imwrite(TEST_SAVE_PATH, dst);
     waitKey(0);
+  }
+}
+
+void DCT()
+{
+  if (!src.empty())
+  {
+    // dct.DCT_transform(src);  // nnd opencv自带
   }
 }
