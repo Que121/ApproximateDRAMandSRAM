@@ -204,6 +204,33 @@ outputQualityEvaluate.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/outputQualityEvaluate.cpp.s
 .PHONY : outputQualityEvaluate.cpp.s
 
+runApproximateStorage.o: runApproximateStorage.cpp.o
+
+.PHONY : runApproximateStorage.o
+
+# target to build an object file
+runApproximateStorage.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/runApproximateStorage.cpp.o
+.PHONY : runApproximateStorage.cpp.o
+
+runApproximateStorage.i: runApproximateStorage.cpp.i
+
+.PHONY : runApproximateStorage.i
+
+# target to preprocess a source file
+runApproximateStorage.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/runApproximateStorage.cpp.i
+.PHONY : runApproximateStorage.cpp.i
+
+runApproximateStorage.s: runApproximateStorage.cpp.s
+
+.PHONY : runApproximateStorage.s
+
+# target to generate assembly for a file
+runApproximateStorage.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/runApproximateStorage.cpp.s
+.PHONY : runApproximateStorage.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... outputQualityEvaluate.o"
 	@echo "... outputQualityEvaluate.i"
 	@echo "... outputQualityEvaluate.s"
+	@echo "... runApproximateStorage.o"
+	@echo "... runApproximateStorage.i"
+	@echo "... runApproximateStorage.s"
 .PHONY : help
 
 

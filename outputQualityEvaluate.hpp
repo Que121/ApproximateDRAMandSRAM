@@ -1,35 +1,63 @@
 #include "Setting.hpp"
+#include <opencv2/core.hpp>
 
-int around(double a);
+// 计算PSNR
+double PSNR_computing(cv::Mat &dst1, cv::Mat &dst2);
+
+// Ｍat转换为CV_32FC1
+void imgTo32FC1(cv::Mat &dst);
+
+// Mat转换为CV_8UC1
+void imgTo8UC1(cv::Mat &dst);
 
 // DCT变换
-class _DCT
-{
-public:
-  double alpha, beta;                                                       // C(k)  C(l)
-  u_int32_t m = 0, n = 0, k = 0, l = 0;                                     // DCT公式中系数
-  cv::Mat DCT_output = cv::Mat ::zeros(IMAGE_WIDTH, IMAGE_HEIGH, CV_64FC1); // DCT输出图像
-
-  _DCT();
-  ~_DCT();
-  void DCT_transform(cv::Mat &_DCT_input); // DCT变换
-  cv::Mat DCT_returnImg();                // 返回DCT变换后的图片
-};
+void DCT_transform(cv::Mat &dst);
 
 // 反DCT变换
-class _IDCT
-{
-public:
-  double alpha, beta;                                                        // C(k)  C(l)
-  u_int32_t m = 0, n = 0, k = 0, l = 0;                                      // IDCT公式中系数
-  cv::Mat IDCT_output = cv::Mat ::zeros(IMAGE_WIDTH, IMAGE_HEIGH, CV_64FC1); // IDCT输出图像
-
-  _IDCT();
-  ~_IDCT();
-  void IDCT_transform(cv::Mat &_IDCT_input); // 反DCT变换
-  cv::Mat IDCT_returnImg();                 // 返回反DCT变换后的图片
-};
+void IDCT_transform(cv::Mat &dst);
 
 //量化
+class ImgQuantization
+{
+public:
+  u_int8_t imgQuantizationRows = 8;
+  u_int8_t imgQuantizationCols = 8;
+
+  ImgQuantization();
+  ~ImgQuantization();
+
+  void ImgQuantify(cv::Mat &dst);
+};
 
 //反量化
+class ImgDequantization
+{
+public:
+  u_int8_t imgDequantizationRows = 8;
+  u_int8_t imgDequantizationCols = 8;
+
+  ImgDequantization();
+  ~ImgDequantization();
+
+  void ImgDequantify(cv::Mat &dst);
+};
+
+// 图像分块和合并
+class ImgChunkandMerge
+{
+public:
+  u_int8_t imgChunkRows = 8;
+  u_int8_t imgChunkCols = 8;
+  std::vector<cv::Mat> ImgChunk; // 存储8*8小块
+  cv::Mat roiImg = Mat ::zeros(imgChunkRows,
+                               imgChunkCols, CV_64FC1);
+  cv::Mat cutImg = Mat ::zeros(imgChunkRows,
+                               imgChunkCols, CV_64FC1);
+
+  ImgChunkandMerge();
+  ~ImgChunkandMerge();
+
+  void imgChunking(cv::Mat &dst); // 图像分块
+  void imgMerging(cv::Mat &dst);  // 图像合并
+  void showImgChunk();            // 显示分块图像
+};

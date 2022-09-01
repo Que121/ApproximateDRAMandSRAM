@@ -13,5 +13,10 @@
   "directory": "/home/quinton/Desktop/ApproximateDRAMandSRAM/build",
   "command": "/usr/bin/clang++   -isystem /usr/local/include/opencv4  -g   -std=gnu++2a -o CMakeFiles/main.dir/outputQualityEvaluate.cpp.o -c /home/quinton/Desktop/ApproximateDRAMandSRAM/outputQualityEvaluate.cpp",
   "file": "/home/quinton/Desktop/ApproximateDRAMandSRAM/outputQualityEvaluate.cpp"
+},
+{
+  "directory": "/home/quinton/Desktop/ApproximateDRAMandSRAM/build",
+  "command": "/usr/bin/clang++   -isystem /usr/local/include/opencv4  -g   -std=gnu++2a -o CMakeFiles/main.dir/runApproximateStorage.cpp.o -c /home/quinton/Desktop/ApproximateDRAMandSRAM/runApproximateStorage.cpp",
+  "file": "/home/quinton/Desktop/ApproximateDRAMandSRAM/runApproximateStorage.cpp"
 }
 ]

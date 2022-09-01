@@ -1,17 +1,5 @@
 #include "outputQualityEvaluate.hpp"
 
-int around(double a)
-{
-  if (a >= 0)
-  {
-    return int(a + 0.5);
-  }
-  else
-  {
-    return int(a - 0.5);
-  }
-}
-
 u_int32_t QuantizationTable[8][8] = {{16, 11, 10, 16, 24, 40, 51, 61}, //标准亮度量化表
                                      {12, 12, 14, 19, 26, 58, 60, 55},
                                      {14, 13, 16, 24, 40, 57, 69, 56},
@@ -21,109 +9,117 @@ u_int32_t QuantizationTable[8][8] = {{16, 11, 10, 16, 24, 40, 51, 61}, //标准�
                                      {49, 64, 78, 87, 103, 121, 120, 101},
                                      {72, 92, 95, 98, 112, 100, 103, 99}};
 
-_DCT ::_DCT()
+double PSNR_computing(cv::Mat &dst1, cv::Mat &dst2)
+{
+  return cv::PSNR(dst1, dst2);
+}
+
+void imgTo32FC1(cv::Mat &dst)
+{
+  dst.convertTo(dst, CV_64FC1);
+}
+
+void imgTo8UC1(cv::Mat &dst)
+{
+  dst.convertTo(dst, CV_8UC1);
+}
+
+void DCT_transform(cv::Mat &dst)
+{
+  cv::dct(dst, dst, 0);
+}
+
+void IDCT_transform(cv::Mat &dst)
+{
+  cv::idct(dst, dst, 0);
+}
+
+ImgQuantization::ImgQuantization()
 {
 }
 
-_DCT ::~_DCT()
+ImgQuantization::~ImgQuantization()
 {
 }
 
-void _DCT::DCT_transform(cv::Mat &DCT_transform)
+void ImgQuantization::ImgQuantify(cv::Mat &dst)
 {
-  for (u_int32_t k = 0; k < DCT_transform.rows; k++)
+  for (u_int8_t i = 0; i < imgQuantizationRows; i++)
   {
-    for (u_int32_t l = 0; l < DCT_transform.cols; l++)
+    for (u_int8_t j = 0; j < imgQuantizationCols; j++)
     {
-      if (k == 0)
-      {
-        alpha = sqrt(1.0 / DCT_transform.rows);
-      }
-      else
-      {
-        alpha = sqrt(2.0 / DCT_transform.rows);
-      }
-      if (l == 0)
-      {
-        beta = sqrt(1.0 / DCT_transform.cols);
-      }
-      else
-      {
-        beta = sqrt(2.0 / DCT_transform.cols);
-      }
-      double temp = 0.0;
-      for (u_int32_t m = 0; m < DCT_transform.rows; m++)
-      {
-        for (u_int32_t n = 0; n < DCT_transform.cols; n++)
-        {
-
-          //每个像素对应的tmp值即累加式计算完毕
-          temp += DCT_transform.at<double>(m, n) *
-                  cos((2 * m + 1) * k * PI / (2.0 * DCT_transform.rows)) *
-                  cos((2 * n + 1) * l * PI / (2.0 * DCT_transform.cols));
-        }
-      }
-      DCT_transform.at<double>(k, l) = alpha * beta * temp;
-      DCT_output.at<double>(k, l) = alpha * beta * temp;
+      dst.at<int>(i, j) =
+          (int)(dst.at<int>(i, j) / QuantizationTable[i][j]);
     }
   }
 }
 
-cv::Mat _DCT::DCT_returnImg()
-{
-  cv::imshow("DCT_output", DCT_output);
-  return DCT_output;
-}
-
-_IDCT::_IDCT(/* args */)
+ImgDequantization::ImgDequantization()
 {
 }
 
-_IDCT::~_IDCT()
+ImgDequantization::~ImgDequantization()
 {
 }
 
-void _IDCT::IDCT_transform(cv::Mat &IDCT_transform)
+void ImgDequantization::ImgDequantify(cv::Mat &dst)
 {
-  for (u_int32_t k = 0; k < IDCT_transform.rows; k++)
+  for (u_int8_t i = 0; i < imgDequantizationRows; i++)
   {
-    for (u_int32_t l = 0; l < IDCT_transform.cols; l++)
+    for (u_int8_t j = 0; j < imgDequantizationCols; j++)
     {
-      double temp = 0.0;
-      for (u_int32_t m = 0; m < IDCT_transform.rows; m++)
-      {
-        for (u_int32_t n = 0; n < IDCT_transform.cols; n++)
-        {
-          if (k == 0)
-          {
-            alpha = 1.0 / sqrt(IDCT_transform.rows);
-          }
-          else
-          {
-            alpha = sqrt(2.0 / IDCT_transform.rows);
-          }
-          if (l == 0)
-          {
-            beta = 1.0 / sqrt(IDCT_transform.cols);
-          }
-          else
-          {
-            beta = sqrt(2.0 / IDCT_transform.cols);
-          }
-          //每个像素对应的tmp值即累加式计算完毕
-          temp += alpha * beta * IDCT_transform.at<double>(m, n) *
-                  cos(PI * (2 * m + 1) * m / (2 * IDCT_transform.rows)) *
-                  cos(PI * (2 * n + 1) * n / (2 * IDCT_transform.cols));
-        }
-      }
-      IDCT_transform.at<double>(k, l) = alpha * beta * temp;
-      IDCT_output.at<double>(k, l) = alpha * beta * temp;
+      dst.at<int>(i, j) =
+          (int)(dst.at<int>(i, j) * QuantizationTable[i][j]);
     }
   }
 }
 
-cv::Mat _IDCT::IDCT_returnImg()
+ImgChunkandMerge::ImgChunkandMerge()
 {
-  cv::imshow("IDCT_output", IDCT_output);
-  return IDCT_output;
+}
+
+ImgChunkandMerge::~ImgChunkandMerge()
+{
+}
+
+void ImgChunkandMerge::imgChunking(cv::Mat &dst)
+{
+  for (u_int8_t i = 0; i < imgChunkRows; i++)
+  {
+    for (u_int8_t j = 0; j < imgChunkCols; j++)
+    {
+      cv::Rect rect(i * (dst.rows / imgChunkRows), j * (dst.cols / imgChunkCols),
+                    (dst.rows / imgChunkRows), (dst.cols / imgChunkCols));
+      cutImg = Mat(dst, rect);
+      roiImg = cutImg.clone();
+      ImgChunk.push_back(roiImg);
+    }
+  }
+}
+void ImgChunkandMerge::showImgChunk()
+{
+  u_int32_t num = 0;
+  for (auto i : ImgChunk)
+  {
+    cv::imshow("num", i);
+    num++;
+  }
+}
+
+void ImgChunkandMerge::imgMerging(cv::Mat &dst)
+{
+  u_int16_t ImgChunkNum = 0;
+  Mat MergeImage(Size(dst.rows, dst.cols), IMREAD_GRAYSCALE);
+  for (u_int8_t i = 0; i < imgChunkRows; i++)
+  {
+    for (u_int8_t j = 0; j < imgChunkCols; j++)
+    {
+      Rect ROI(i * (dst.rows / imgChunkRows), j * (dst.cols / imgChunkCols),
+               (dst.rows / imgChunkRows), (dst.cols / imgChunkCols));
+      ImgChunk[ImgChunkNum].copyTo(MergeImage(ROI));
+      ImgChunkNum++;
+    }
+  }
+  dst = MergeImage;
+  ImgChunk.clear();
 }

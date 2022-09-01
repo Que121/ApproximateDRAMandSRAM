@@ -52,21 +52,23 @@ memory
 cmath
 -
 
-/home/quinton/Desktop/ApproximateDRAMandSRAM/main.cpp
-main.hpp
-/home/quinton/Desktop/ApproximateDRAMandSRAM/main.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/outputQualityEvaluate.hpp
+Setting.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/Setting.hpp
+opencv2/core.hpp
+-
 
-/home/quinton/Desktop/ApproximateDRAMandSRAM/main.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/runApproximateStorage.cpp
+runApproximateStorage.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/runApproximateStorage.hpp
+
+/home/quinton/Desktop/ApproximateDRAMandSRAM/runApproximateStorage.hpp
 Setting.hpp
 /home/quinton/Desktop/ApproximateDRAMandSRAM/Setting.hpp
 DRAMandSRAM.hpp
 /home/quinton/Desktop/ApproximateDRAMandSRAM/DRAMandSRAM.hpp
 outputQualityEvaluate.hpp
 /home/quinton/Desktop/ApproximateDRAMandSRAM/outputQualityEvaluate.hpp
-
-/home/quinton/Desktop/ApproximateDRAMandSRAM/outputQualityEvaluate.hpp
-Setting.hpp
-/home/quinton/Desktop/ApproximateDRAMandSRAM/Setting.hpp
 
 /usr/local/include/opencv4/opencv2/core.hpp
 opencv2/core/cvdef.h
