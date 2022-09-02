@@ -231,6 +231,33 @@ runApproximateStorage.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/runApproximateStorage.cpp.s
 .PHONY : runApproximateStorage.cpp.s
 
+vddReduction.o: vddReduction.cpp.o
+
+.PHONY : vddReduction.o
+
+# target to build an object file
+vddReduction.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vddReduction.cpp.o
+.PHONY : vddReduction.cpp.o
+
+vddReduction.i: vddReduction.cpp.i
+
+.PHONY : vddReduction.i
+
+# target to preprocess a source file
+vddReduction.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vddReduction.cpp.i
+.PHONY : vddReduction.cpp.i
+
+vddReduction.s: vddReduction.cpp.s
+
+.PHONY : vddReduction.s
+
+# target to generate assembly for a file
+vddReduction.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vddReduction.cpp.s
+.PHONY : vddReduction.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -252,6 +279,9 @@ help:
 	@echo "... runApproximateStorage.o"
 	@echo "... runApproximateStorage.i"
 	@echo "... runApproximateStorage.s"
+	@echo "... vddReduction.o"
+	@echo "... vddReduction.i"
+	@echo "... vddReduction.s"
 .PHONY : help
 
 

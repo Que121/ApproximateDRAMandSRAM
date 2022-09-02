@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/quinton/Desktop/ApproximateDRAMandSRAM/main.cpp" "/home/quinton/Desktop/ApproximateDRAMandSRAM/build/CMakeFiles/main.dir/main.cpp.o"
   "/home/quinton/Desktop/ApproximateDRAMandSRAM/outputQualityEvaluate.cpp" "/home/quinton/Desktop/ApproximateDRAMandSRAM/build/CMakeFiles/main.dir/outputQualityEvaluate.cpp.o"
   "/home/quinton/Desktop/ApproximateDRAMandSRAM/runApproximateStorage.cpp" "/home/quinton/Desktop/ApproximateDRAMandSRAM/build/CMakeFiles/main.dir/runApproximateStorage.cpp.o"
+  "/home/quinton/Desktop/ApproximateDRAMandSRAM/vddReduction.cpp" "/home/quinton/Desktop/ApproximateDRAMandSRAM/build/CMakeFiles/main.dir/vddReduction.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

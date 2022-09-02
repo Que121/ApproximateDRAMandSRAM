@@ -7,11 +7,15 @@ SRAM sram;
 ImgChunkandMerge imgchunkandmerge;
 ImgQuantization imgquantization;
 ImgDequantization imgdequantization;
+VddReduction vddreduction;
 
 void imgPreProcessing(cv::Mat &src, cv::Mat &dst, cv::Size dsize)
 {
   cv::resize(src, src, dsize, 0, 0, INTER_AREA); // 归一化
-  cv::cvtColor(src, src, COLOR_RGB2GRAY);        // 灰度化
+  if (src.channels() != 1)
+  {
+    cv::cvtColor(src, src, COLOR_RGB2GRAY); // 灰度化
+  }
   src.copyTo(dst);
 }
 
@@ -300,7 +304,8 @@ void PSNR_imgApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
 {
   if (!src.empty())
   {
-    RAW_imgPreProcessing(src, dst, dsize);
+    // RAW_imgPreProcessing(src, dst, dsize);
+    imgPreProcessing(src, dst, dsize);
     for (int row = 0; row < dst.rows; row++)
     {
       for (int col = 0; col < dst.cols; col++)
@@ -319,7 +324,40 @@ void PSNR_imgApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
 
 void PSNR_imgCompression(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
 {
-  RAW_imgPreProcessing(src, dst, dsize);
+  // RAW_imgPreProcessing(src, dst, dsize);
+  imgPreProcessing(src, dst, dsize);
+  ImgCompression(dst, ROUNDPOINT);
+  fmt::print("PSNR值为:{:f}", PSNR_computing(src, dst));
+}
+
+void VddReductionAndApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
+{
+  if (!src.empty())
+  {
+    imgPreProcessing(src, dst, dsize);
+    for (int row = 0; row < dst.rows; row++)
+    {
+      for (int col = 0; col < dst.cols; col++)
+      {
+        std::bitset<8> BinaryTemp(dst.at<uchar>(row, col)); // 八位二进制转换
+        ApproximateBinaryTemp(BinaryTemp);                  // 近似操作
+        DecodeFlipBits(BinaryTemp);                         // 解码
+        printf("\033[32m"
+               "降压前--> ");
+        vddreduction.showlowBitsVddReduction(BinaryTemp);
+        vddreduction.lowBitsVddReduction(BinaryTemp);
+        printf("\033[31m"
+               "降压后--> ");
+        vddreduction.showlowBitsVddReduction(BinaryTemp);
+        dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
+      }
+    }
+  }
+}
+
+void PSNR_VddReductionAndApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
+{
+  VddReductionAndApproximate(src, dst, dsize);
   ImgCompression(dst, ROUNDPOINT);
   fmt::print("PSNR值为:{:f}", PSNR_computing(src, dst));
 }

@@ -21,11 +21,14 @@
 #include <cmath>
 #include <sstream>
 #include <iomanip>
+#include <map>
+#include <time.h>
+#include <unistd.h>
 
 // s#define DEBUG_BITS 1 // 开启调试模式
 // #define DEBUG_METRICATION 1
 
-#define K 4                                                                       //近似阈值
+#define K 4                                                                       // 近似阈值
 #define TEST_PATH "/home/quinton/Desktop/ApproximateDRAMandSRAM/src.jpeg"         // 测试路径
 #define TEST_SAVE_PATH "/home/quinton/Desktop/ApproximateDRAMandSRAM/dst.jpeg"    // 测试保存路径
 #define EXCEL_NAME "/home/quinton/Desktop/ApproximateDRAMandSRAM/DRAM_Bits.csv"   // excel导出路径
@@ -36,6 +39,7 @@
 #define IMAGE_HEIGHT 512                                                          // 输入图像高
 #define PI 3.1415926                                                              // 近似圆周率(DCT使用)
 #define ROUNDPOINT 0                                                              // 量化四舍五入保留的小数位
+#define VDD 0.45                                                                  // 电源供电电压
 
 using namespace cv;
 using namespace std;

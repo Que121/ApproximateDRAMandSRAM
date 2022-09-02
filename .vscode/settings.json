@@ -57,6 +57,7 @@
         "numeric": "cpp",
         "list": "c",
         "outputqualityevaluate.hpp": "c",
-        "runapproximatestorage.hpp": "c"
+        "runapproximatestorage.hpp": "c",
+        "vddreduction.hpp": "c"
     }
 }

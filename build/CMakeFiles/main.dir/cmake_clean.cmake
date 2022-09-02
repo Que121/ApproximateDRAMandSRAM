@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/main.cpp.o"
   "CMakeFiles/main.dir/outputQualityEvaluate.cpp.o"
   "CMakeFiles/main.dir/runApproximateStorage.cpp.o"
+  "CMakeFiles/main.dir/vddReduction.cpp.o"
   "main"
   "main.pdb"
 )

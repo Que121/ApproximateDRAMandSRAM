@@ -1,6 +1,7 @@
 #include "Setting.hpp"
 #include "DRAMandSRAM.hpp"
 #include "outputQualityEvaluate.hpp"
+#include "vddReduction.hpp"
 
 // 图像预处理
 void imgPreProcessing(cv::Mat &src, cv::Mat &dst, cv::Size dsize);
@@ -52,3 +53,9 @@ void PSNR_imgApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize);
 
 // 压缩图和原图计算PSNR
 void PSNR_imgCompression(cv::Mat &src, cv::Mat &dst, cv::Size &dsize);
+
+// 近似 降低电压
+void VddReductionAndApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize);
+
+// 近似降低电压压缩和原图计算PSNR
+void PSNR_VddReductionAndApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize);

@@ -55,10 +55,10 @@ void imgRound(cv::Mat &dst, const int &bits)
   {
     for (u_int8_t col = 0; col < dst.cols; col++)
     {
-      fmt::print("四舍五入前：{:f} \n", dst.at<double>(row, col));
+      // fmt::print("四舍五入前：{:f} \n", dst.at<double>(row, col));
       dst.at<double>(row, col) =
           round(dst.at<double>(row, col), bits);
-      fmt::print("四舍五入后：{:f} \n", dst.at<double>(row, col));
+      // fmt::print("四舍五入后：{:f} \n", dst.at<double>(row, col));
     }
   }
 }
