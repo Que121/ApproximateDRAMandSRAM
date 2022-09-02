@@ -9,6 +9,21 @@ u_int32_t QuantizationTable[8][8] = {{16, 11, 10, 16, 24, 40, 51, 61}, //标准�
                                      {49, 64, 78, 87, 103, 121, 120, 101},
                                      {72, 92, 95, 98, 112, 100, 103, 99}};
 
+// floor和ceil方法 无法精确到小数点几位
+inline double round(double &r)
+{
+  return (r > 0.0) ? floor(r + 0.5) : ceil(r - 0.5);
+}
+
+// 输入流方法 可以精确到小数点几位
+inline double round(double &number, const u_int8_t &bits)
+{
+  stringstream ss;
+  ss << fixed << setprecision(bits) << number;
+  ss >> number;
+  return number;
+}
+
 double PSNR_computing(cv::Mat &dst1, cv::Mat &dst2)
 {
   return cv::PSNR(dst1, dst2);
@@ -34,6 +49,20 @@ void IDCT_transform(cv::Mat &dst)
   cv::idct(dst, dst, 0);
 }
 
+void imgRound(cv::Mat &dst, const int &bits)
+{
+  for (u_int8_t row = 0; row < dst.rows; row++)
+  {
+    for (u_int8_t col = 0; col < dst.cols; col++)
+    {
+      fmt::print("四舍五入前：{:f} \n", dst.at<double>(row, col));
+      dst.at<double>(row, col) =
+          round(dst.at<double>(row, col), bits);
+      fmt::print("四舍五入后：{:f} \n", dst.at<double>(row, col));
+    }
+  }
+}
+
 ImgQuantization::ImgQuantization()
 {
 }
@@ -48,8 +77,8 @@ void ImgQuantization::ImgQuantify(cv::Mat &dst)
   {
     for (u_int8_t j = 0; j < imgQuantizationCols; j++)
     {
-      dst.at<int>(i, j) =
-          (int)(dst.at<int>(i, j) / QuantizationTable[i][j]);
+      dst.at<double>(i, j) =
+          (double)(dst.at<double>(i, j) / (double)QuantizationTable[i][j]);
     }
   }
 }
@@ -68,8 +97,8 @@ void ImgDequantization::ImgDequantify(cv::Mat &dst)
   {
     for (u_int8_t j = 0; j < imgDequantizationCols; j++)
     {
-      dst.at<int>(i, j) =
-          (int)(dst.at<int>(i, j) * QuantizationTable[i][j]);
+      dst.at<double>(i, j) =
+          (double)(dst.at<double>(i, j) * (double )QuantizationTable[i][j]);
     }
   }
 }

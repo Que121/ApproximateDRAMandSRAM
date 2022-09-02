@@ -216,9 +216,6 @@ FMT_DIR:PATH=/usr/local/lib/cmake/fmt
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=/usr/local/lib/cmake/opencv4
 
-//The directory containing a CMake configuration file for fmt.
-fmt_DIR:PATH=/usr/local/lib/cmake/fmt
-
 
 ########################
 # INTERNAL cache entries

@@ -13,12 +13,9 @@ int main()
 {
   // DRAM_ApproximateStorage();
   // SRAM_ApproximateStorage();
-  
-  // cv::imshow("src", src);
-  // PSNR_imgApproximate(src, dst, dsize);
-  ImgCompression(src);
+  PSNR_imgApproximate(src, dst, dsize);
+  // PSNR_imgCompression(src, dst, dsize);
   // cv::imshow("rawImage", returnRawData());
-  fmt::print("PSNR值为:{:f}", PSNR_computing(src, dst));
   cv::imshow("src", src);
   cv::imshow("result", dst);
   cv::waitKey();

@@ -1,5 +1,4 @@
 #include "Setting.hpp"
-#include <opencv2/core.hpp>
 
 // 计算PSNR
 double PSNR_computing(cv::Mat &dst1, cv::Mat &dst2);
@@ -15,6 +14,9 @@ void DCT_transform(cv::Mat &dst);
 
 // 反DCT变换
 void IDCT_transform(cv::Mat &dst);
+
+// 图像四舍五入
+void imgRound(cv::Mat &dst,const int &bits);
 
 //量化
 class ImgQuantization

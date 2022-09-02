@@ -280,7 +280,7 @@ void ApproximateStorageDebug(cv::Mat &src, cv::Mat &dst, cv::Size dsize)
   }
 }
 
-void ImgCompression(cv::Mat &dst)
+void ImgCompression(cv::Mat &dst, const int &bits)
 {
   imgTo32FC1(dst);
   imgchunkandmerge.imgChunking(dst);
@@ -288,6 +288,7 @@ void ImgCompression(cv::Mat &dst)
   {
     DCT_transform(i);
     imgquantization.ImgQuantify(i);
+    imgRound(i, bits);
     imgdequantization.ImgDequantify(i);
     IDCT_transform(i);
   }
@@ -299,7 +300,7 @@ void PSNR_imgApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
 {
   if (!src.empty())
   {
-    imgPreProcessing(src, dst, dsize);
+    RAW_imgPreProcessing(src, dst, dsize);
     for (int row = 0; row < dst.rows; row++)
     {
       for (int col = 0; col < dst.cols; col++)
@@ -311,6 +312,7 @@ void PSNR_imgApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
         dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
       }
     }
+    ImgCompression(dst, ROUNDPOINT);
     fmt::print("PSNR值为:{:f}", PSNR_computing(src, dst));
   }
 }
@@ -318,5 +320,6 @@ void PSNR_imgApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
 void PSNR_imgCompression(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
 {
   RAW_imgPreProcessing(src, dst, dsize);
-
+  ImgCompression(dst, ROUNDPOINT);
+  fmt::print("PSNR值为:{:f}", PSNR_computing(src, dst));
 }

@@ -45,7 +45,10 @@ void SRAM_ApproximateStorage(cv::Mat &src, cv::Mat &dst, cv::Size dsize);
 void ApproximateStorageDebug(cv::Mat &src, cv::Mat &dst, cv::Size dsize);
 
 // 图片分块dct、量化、反量化、idct
-void ImgCompression(cv::Mat &dst);
+void ImgCompression(cv::Mat &dst, const int &bits);
 
 // 近似图和原图计算PSNR
 void PSNR_imgApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize);
+
+// 压缩图和原图计算PSNR
+void PSNR_imgCompression(cv::Mat &src, cv::Mat &dst, cv::Size &dsize);
