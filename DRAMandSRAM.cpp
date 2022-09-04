@@ -79,6 +79,11 @@ u_int32_t DRAM::CountHighBits()
   return count;
 }
 
+double DRAM::GetHighBitsAverage()
+{
+  return (double)(CountHighBits()) / (IMAGE_WIDTH * IMAGE_HEIGHT);
+}
+
 double DRAM::GetHighBitsPercentage()
 {
   return (double)(CountHighBits()) / (double)(GetAllBits());
@@ -166,6 +171,13 @@ double SRAM::CalculateFlipProbability()
   return (double)(SRAM_FlipTimes) / (double)(SRAM_Bits.size() * BITS_8);
 }
 
+double SRAM::CalculateAllFlipProbability()
+{
+  u_int32_t allFilpTimes = this->allFilpTimes;
+  this->allFilpTimes = 0;
+  return (double)(allFilpTimes) / (double)(IMAGE_WIDTH * IMAGE_HEIGHT * BITS_8);
+}
+
 void SRAM::CalculateFlipBits(u_int32_t &StorageLoopTimes, u_int32_t &storageBitsFlag)
 {
   if (SRAM_Bits.size() == storageBitsFlag)
@@ -188,6 +200,7 @@ void SRAM::CalculateFlipBits(u_int32_t &StorageLoopTimes, u_int32_t &storageBits
       }
     }
     SRAM_FlipTimes = count;
+    allFilpTimes += count;
     fmt::print("翻转个数：{:d} 总比特：{:d}\n第{:d}次存储的翻转概率为：{:f}\n", SRAM_FlipTimes, SRAM_Bits.size() * BITS_8,
                StorageLoopTimes_flag, CalculateFlipProbability());
     if (StorageLoopTimes_flag < StorageLoopTimes)

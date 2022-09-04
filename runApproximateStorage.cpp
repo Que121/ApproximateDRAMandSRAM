@@ -17,6 +17,7 @@ void imgPreProcessing(cv::Mat &src, cv::Mat &dst, cv::Size dsize)
     cv::cvtColor(src, src, COLOR_RGB2GRAY); // 灰度化
   }
   src.copyTo(dst);
+  // imwrite(TEST_SAVE_PATH, dst);
 }
 
 void RAW_imgPreProcessing(cv::Mat &src, cv::Mat &dst, cv::Size dsize)
@@ -154,15 +155,15 @@ void DRAM_ApproximateStorage(cv::Mat &src, cv::Mat &dst, cv::Size dsize)
         std::bitset<8> BinaryTemp(v);      // 八位二进制转换
         ApproximateBinaryTemp(BinaryTemp); // 近似操作
         dram.StorageBits(BinaryTemp);
-        DecodeFlipBits(BinaryTemp); // 解码
+        // DecodeFlipBits(BinaryTemp); // 解码
         dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
       }
     }
     // dram.ShowStorageBits();
     // dram.ShowGroupsBits();
     // dram.WriteExcelBits((string)(EXCEL_NAME));
-    // fmt::print("DRAM高位比特数：{:d} DRAM总比特数：{:d} DRAM高位比特占比：{:f}",
-    //            dram.CountHighBits(), dram.GetAllBits(), dram.GetHighBitsPercentage());
+    fmt::print("DRAM高位比特数：{:d}\nDRAM总比特数：{:d} \nDRAM高位比特占比：{:f}\nDRAM单个像素平均含有的高位比特数：{:f}",
+               dram.CountHighBits(), dram.GetAllBits(), dram.GetHighBitsPercentage(), dram.GetHighBitsAverage());
     namedWindow("dst", WINDOW_AUTOSIZE);
     imshow("dst", dst);
     imwrite(TEST_SAVE_PATH, dst);
@@ -215,11 +216,11 @@ void SRAM_ApproximateStorage(cv::Mat &src, cv::Mat &dst, cv::Size dsize)
             }
           }
         }
-
         DecodeFlipBits(BinaryTemp); // 解码
         dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
       }
     }
+    fmt::print("总翻转概率为：{:f}", sram.CalculateAllFlipProbability());
     namedWindow("dst", WINDOW_AUTOSIZE);
     imshow("dst", dst);
     imwrite(TEST_SAVE_PATH, dst);
@@ -327,6 +328,7 @@ void PSNR_imgCompression(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
   // RAW_imgPreProcessing(src, dst, dsize);
   imgPreProcessing(src, dst, dsize);
   ImgCompression(dst, ROUNDPOINT);
+  // imwrite(RESULT_SAVE_PATH + to_string(PSNR_computing(src, dst))+".jpeg",dst);
   fmt::print("PSNR值为:{:f}", PSNR_computing(src, dst));
 }
 
@@ -342,13 +344,13 @@ void VddReductionAndApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
         std::bitset<8> BinaryTemp(dst.at<uchar>(row, col)); // 八位二进制转换
         ApproximateBinaryTemp(BinaryTemp);                  // 近似操作
         DecodeFlipBits(BinaryTemp);                         // 解码
-        printf("\033[32m"
-               "降压前--> ");
-        vddreduction.showlowBitsVddReduction(BinaryTemp);
+        // printf("\033[32m"
+        //        "降压前--> ");
+        // vddreduction.showlowBitsVddReduction(BinaryTemp);
         vddreduction.lowBitsVddReduction(BinaryTemp);
-        printf("\033[31m"
-               "降压后--> ");
-        vddreduction.showlowBitsVddReduction(BinaryTemp);
+        // printf("\033[31m"
+        //        "降压后--> ");
+        // vddreduction.showlowBitsVddReduction(BinaryTemp);
         dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
       }
     }
