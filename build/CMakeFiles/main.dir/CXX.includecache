@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/quinton/Desktop/ApproximateDRAMandSRAM/DRAMandSRAM.cpp
+DRAMandSRAM.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/DRAMandSRAM.hpp
+
+/home/quinton/Desktop/ApproximateDRAMandSRAM/DRAMandSRAM.hpp
+Setting.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/Setting.hpp
+
 /home/quinton/Desktop/ApproximateDRAMandSRAM/Setting.hpp
 opencv2/core/core.hpp
 -
@@ -57,6 +65,38 @@ time.h
 -
 unistd.h
 -
+random
+-
+
+/home/quinton/Desktop/ApproximateDRAMandSRAM/main.cpp
+main.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/main.hpp
+
+/home/quinton/Desktop/ApproximateDRAMandSRAM/main.hpp
+runApproximateStorage.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/runApproximateStorage.hpp
+
+/home/quinton/Desktop/ApproximateDRAMandSRAM/outputQualityEvaluate.cpp
+outputQualityEvaluate.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/outputQualityEvaluate.hpp
+
+/home/quinton/Desktop/ApproximateDRAMandSRAM/outputQualityEvaluate.hpp
+Setting.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/Setting.hpp
+
+/home/quinton/Desktop/ApproximateDRAMandSRAM/runApproximateStorage.cpp
+runApproximateStorage.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/runApproximateStorage.hpp
+
+/home/quinton/Desktop/ApproximateDRAMandSRAM/runApproximateStorage.hpp
+Setting.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/Setting.hpp
+DRAMandSRAM.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/DRAMandSRAM.hpp
+outputQualityEvaluate.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/outputQualityEvaluate.hpp
+vddReduction.hpp
+/home/quinton/Desktop/ApproximateDRAMandSRAM/vddReduction.hpp
 
 /home/quinton/Desktop/ApproximateDRAMandSRAM/vddReduction.cpp
 vddReduction.hpp
