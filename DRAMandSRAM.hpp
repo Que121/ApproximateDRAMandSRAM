@@ -30,7 +30,7 @@ public:
   static const u_int32_t storageSizekb_128 = 128;                  // 128kb
   static const u_int32_t storageSizekb_256 = 256;                  // 256kb
   u_int8_t SRAM_HighBits = 0;                                      // SRAM高位比特数
-  u_int32_t SRAM_storageSizeByte = storageSizekb_128 * KB_TO_BYTE; // SRAM储存的Byte数
+  u_int32_t SRAM_storageSizeByte = storageSizekb_64 * KB_TO_BYTE; // SRAM储存的Byte数
   u_int32_t SRAM_FlipTimes = 0;                                    // 翻转次数
   u_int32_t allFilpTimes = 0;                                      // 总翻转次数
   u_int32_t StorageLoopTimes_flag = 1;                             // 存储循环标志

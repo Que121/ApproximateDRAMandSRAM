@@ -58,6 +58,8 @@
         "list": "c",
         "outputqualityevaluate.hpp": "c",
         "runapproximatestorage.hpp": "c",
-        "vddreduction.hpp": "c"
+        "vddreduction.hpp": "c",
+        "map": "c",
+        "iomanip": "c"
     }
 }

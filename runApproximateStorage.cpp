@@ -159,7 +159,7 @@ void DRAM_ApproximateStorage(cv::Mat &src, cv::Mat &dst, cv::Size dsize)
         dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
       }
     }
-    // dram.ShowStorageBits();
+    dram.ShowStorageBits();
     // dram.ShowGroupsBits();
     // dram.WriteExcelBits((string)(EXCEL_NAME));
     fmt::print("DRAM高位比特数：{:d}\nDRAM总比特数：{:d} \nDRAM高位比特占比：{:f}\nDRAM单个像素平均含有的高位比特数：{:f}",
@@ -307,6 +307,7 @@ void PSNR_imgApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
   {
     // RAW_imgPreProcessing(src, dst, dsize);
     imgPreProcessing(src, dst, dsize);
+
     for (int row = 0; row < dst.rows; row++)
     {
       for (int col = 0; col < dst.cols; col++)
@@ -318,6 +319,7 @@ void PSNR_imgApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
         dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
       }
     }
+
     ImgCompression(dst, ROUNDPOINT);
     fmt::print("PSNR值为:{:f}", PSNR_computing(src, dst));
   }
@@ -344,13 +346,13 @@ void VddReductionAndApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
         std::bitset<8> BinaryTemp(dst.at<uchar>(row, col)); // 八位二进制转换
         ApproximateBinaryTemp(BinaryTemp);                  // 近似操作
         DecodeFlipBits(BinaryTemp);                         // 解码
-        // printf("\033[32m"
-        //        "降压前--> ");
-        // vddreduction.showlowBitsVddReduction(BinaryTemp);
+        printf("\033[32m"
+               "降压前--> ");
+        vddreduction.showlowBitsVddReduction(BinaryTemp);
         vddreduction.lowBitsVddReduction(BinaryTemp);
-        // printf("\033[31m"
-        //        "降压后--> ");
-        // vddreduction.showlowBitsVddReduction(BinaryTemp);
+        printf("\033[31m"
+               "降压后--> ");
+        vddreduction.showlowBitsVddReduction(BinaryTemp);
         dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
       }
     }
