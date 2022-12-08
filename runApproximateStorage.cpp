@@ -330,7 +330,9 @@ void PSNR_imgCompression(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
   // RAW_imgPreProcessing(src, dst, dsize);
   imgPreProcessing(src, dst, dsize);
   ImgCompression(dst, ROUNDPOINT);
-  // imwrite(RESULT_SAVE_PATH + to_string(PSNR_computing(src, dst))+".jpeg",dst);
+  imwrite(RESULT_SAVE_PATH +
+              to_string(PSNR_computing(src, dst)) + "_" + IMG_NAME,
+          dst);
   fmt::print("PSNR值为:{:f}", PSNR_computing(src, dst));
 }
 

@@ -29,12 +29,13 @@
 // #define DEBUG_BITS 1 // 开启调试模式
 // #define DEBUG_METRICATION 1
 
-#define K 4                                                                          // 近似阈值
-#define TEST_PATH "/home/quinton/Desktop/ApproximateDRAMandSRAM/img/src14.jpeg"      // 测试路径
-#define TEST_SAVE_PATH "/home/quinton/Desktop/ApproximateDRAMandSRAM/img/dst14.jpeg" // 测试保存路径
+#define K 7                                                                       // 近似阈值
+#define TEST_PATH "/home/quinton/Desktop/ApproximateDRAMandSRAM/img/src19.jpg"      // 测试路径
+#define TEST_SAVE_PATH "/home/quinton/Desktop/ApproximateDRAMandSRAM/img/dst19.jpg" // 测试保存路径
 #define RESULT_SAVE_PATH "/home/quinton/Desktop/ApproximateDRAMandSRAM/result_img/"  // 结果保存路径
 #define EXCEL_NAME "/home/quinton/Desktop/ApproximateDRAMandSRAM/DRAM_Bits.csv"      // excel导出路径
 #define RAW_IMAGE_PATH "/home/quinton/Desktop/ApproximateDRAMandSRAM/lena512.raw"    // raw格式图片路径
+#define IMG_NAME "19.jpg"                                                           // 保存的dst名字
 #define BITS_8 8                                                                     // 定义使用的bit位数
 #define KB_TO_BYTE 1024                                                              // 1KB=1024Byte
 #define IMAGE_WIDTH 512                                                              // 输入图像宽

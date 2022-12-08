@@ -33,7 +33,7 @@ void TruncatedFlipBits(std::bitset<8> &BinaryTemp);
 // 解码 标志位不变
 void DecodeFlipBits(std::bitset<8> &BinaryTemp);
 
-// 近似操作八位二进制
+// 近似操作八位二进制%%
 void ApproximateBinaryTemp(std::bitset<8> &BinaryTemp);
 
 // DRAM近似存储
@@ -48,7 +48,7 @@ void ApproximateStorageDebug(cv::Mat &src, cv::Mat &dst, cv::Size dsize);
 // 图片分块dct、量化、反量化、idct
 void ImgCompression(cv::Mat &dst, const int &bits);
 
-// 近似图和原图计算PSNR
+// 近似图和原图计算PSNR（并压缩）
 void PSNR_imgApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize);
 
 // 压缩图和原图计算PSNR

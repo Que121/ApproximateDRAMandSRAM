@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Oct  3 22:37:40 2022
+# Make data base, printed on Thu Dec  8 10:18:57 2022
 
 # Variables
 
@@ -45,7 +45,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"cc0490d1397af23dc5bf44a96fe15dbb.zh-cn","_translationsConfigFile":"/home/quinton/.config/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/tcf.json","_cacheRoot":"/home/quinton/.config/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn","_resolvedLanguagePackCoreLocation":"/home/quinton/.config/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/e4503b30fc78200f846c62cf8091b76ff5547662","_corruptedFile":"/home/quinton/.config/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:63598
+JOURNAL_STREAM = 8:59572
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile
@@ -55,19 +55,17 @@ MAKEFILE_LIST :=
 # environment
 IM_CONFIG_PHASE = 1
 # environment
-QT_IM_MODULE = fcitx
-# environment
 USERNAME = quinton
 # environment
 MAKELEVEL := 0
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=5cf5a055185abc13634e5643633aead1
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=85f32f26210f4920d33a25fd63914858
 # environment
 _ = /usr/bin/code
 # environment
-MANAGERPID = 2138
+MANAGERPID = 2069
 # environment
 ROS_PYTHON_VERSION = 3
 # environment
@@ -83,13 +81,13 @@ CLUTTER_IM_MODULE = fcitx
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-NO_PROXY = localhost,127.0.0.0/8,::1
+PATH = /opt/ros/foxy/bin:/usr/local/cuda-10.1/bin:/home/quinton/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/quinton//gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/bin
 # environment
 XDG_SESSION_DESKTOP = ubuntu
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/quinton-Blade-14-RZ09-0370:@/tmp/.ICE-unix/2418,unix/quinton-Blade-14-RZ09-0370:/tmp/.ICE-unix/2418
+SESSION_MANAGER = local/quinton-Blade-14-RZ09-0370:@/tmp/.ICE-unix/2353,unix/quinton-Blade-14-RZ09-0370:/tmp/.ICE-unix/2353
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -97,7 +95,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 6a20964585e541368c7eaf5e2f09b359
+INVOCATION_ID = a7bce94031e3411aad778e0e21e0dd5b
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -109,9 +107,7 @@ SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # automatic
 %F = $(notdir $%)
 # environment
-HTTPS_PROXY = http://127.0.0.1:7890/
-# environment
-no_proxy = localhost,127.0.0.0/8,::1
+DISPLAY = :1
 # environment
 GTK_IM_MODULE = fcitx
 # environment
@@ -119,7 +115,7 @@ PWD = /home/quinton/Desktop/ApproximateDRAMandSRAM
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2377
+SSH_AGENT_PID = 2308
 # environment
 PKG_CONFIG_PATH = :/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig
 # environment
@@ -163,7 +159,7 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-PATH = /opt/ros/foxy/bin:/usr/local/cuda-10.1/bin:/home/quinton/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/quinton//gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/bin
+QT_IM_MODULE = fcitx
 # environment
 SHLVL = 1
 # environment
@@ -209,21 +205,13 @@ GDK_BACKEND = x11
 # environment
 LC_PAPER = zh_CN.UTF-8
 # environment
-NO_AT_BRIDGE = 1
-# environment
-HTTP_PROXY = http://127.0.0.1:7890/
-# environment
 QT_ACCESSIBILITY = 1
-# environment
-DISPLAY = :1
 # default
 MAKEFILES := 
 # environment
 LC_NUMERIC = zh_CN.UTF-8
 # automatic
 <F = $(notdir $<)
-# environment
-https_proxy = http://127.0.0.1:7890/
 # environment
 LC_MEASUREMENT = zh_CN.UTF-8
 # environment
@@ -233,11 +221,11 @@ DBUS_STARTER_BUS_TYPE = session
 # environment
 QT4_IM_MODULE = fcitx
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/8b4cf08b_3cde_4e7b_a54c_99e1b2dd537c
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/66a51c4f_25a6_4a4e_90d9_7feb8c41e115
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.103
+GNOME_TERMINAL_SERVICE = :1.116
 # default
 SUFFIXES := 
 # environment
@@ -251,19 +239,17 @@ LC_IDENTIFICATION = zh_CN.UTF-8
 # default
 .RECIPEPREFIX := 
 # environment
-http_proxy = http://127.0.0.1:7890/
-# environment
 LC_ADDRESS = zh_CN.UTF-8
 # environment
 LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 3243
+VSCODE_PID = 5497
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=5cf5a055185abc13634e5643633aead1
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=85f32f26210f4920d33a25fd63914858
 # variable set hash-table stats:
-# Load=126/1024=12%, Rehash=0, Collisions=23/148=16%
+# Load=119/1024=12%, Rehash=0, Collisions=20/141=14%
 
 # Pattern-specific Variable Values
 
@@ -271,9 +257,9 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=5cf5a055185abc13634e564
 
 # Directories
 
-# . (device 66311, inode 7210457): 29 files, no impossibilities.
+# . (device 66311, inode 7210457): 31 files, no impossibilities.
 
-# 29 files, no impossibilities in 1 directories.
+# 31 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -287,9 +273,6 @@ all:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has not been updated.
- 
-make: *** No rule to make target 'all'.  Stop.
-
 
 # Not a target:
 Makefile:
@@ -311,6 +294,9 @@ makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 # Not a target:
 GNUmakefile:
 #  Implicit rule search has been done.
@@ -326,12 +312,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 37 / storage = 528 B / avg = 14 B
-# current buf: size = 8162 B / used = 528 B / count = 37 / avg = 14 B
+# strcache buffers: 1 (0) / strings = 39 / storage = 571 B / avg = 14 B
+# current buf: size = 8162 B / used = 571 B / count = 39 / avg = 14 B
 
-# strcache performance: lookups = 40 / hit rate = 7%
+# strcache performance: lookups = 42 / hit rate = 7%
 # hash-table stats:
-# Load=37/8192=0%, Rehash=0, Collisions=1/40=2%
-# Finished Make data base on Mon Oct  3 22:37:40 2022
+# Load=39/8192=0%, Rehash=0, Collisions=1/42=2%
+# Finished Make data base on Thu Dec  8 10:18:57 2022
 
  
