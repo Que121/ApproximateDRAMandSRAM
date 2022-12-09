@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Dec  8 10:18:57 2022
+# Make data base, printed on Thu Dec  8 21:57:37 2022
 
 # Variables
 
@@ -45,7 +45,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"cc0490d1397af23dc5bf44a96fe15dbb.zh-cn","_translationsConfigFile":"/home/quinton/.config/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/tcf.json","_cacheRoot":"/home/quinton/.config/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn","_resolvedLanguagePackCoreLocation":"/home/quinton/.config/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/e4503b30fc78200f846c62cf8091b76ff5547662","_corruptedFile":"/home/quinton/.config/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:59572
+JOURNAL_STREAM = 8:61617
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile
@@ -61,11 +61,11 @@ MAKELEVEL := 0
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=85f32f26210f4920d33a25fd63914858
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=2b03d23d1d2ca51ce308370f6391e669
 # environment
 _ = /usr/bin/code
 # environment
-MANAGERPID = 2069
+MANAGERPID = 2085
 # environment
 ROS_PYTHON_VERSION = 3
 # environment
@@ -87,7 +87,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/quinton-Blade-14-RZ09-0370:@/tmp/.ICE-unix/2353,unix/quinton-Blade-14-RZ09-0370:/tmp/.ICE-unix/2353
+SESSION_MANAGER = local/quinton-Blade-14-RZ09-0370:@/tmp/.ICE-unix/2368,unix/quinton-Blade-14-RZ09-0370:/tmp/.ICE-unix/2368
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -95,7 +95,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = a7bce94031e3411aad778e0e21e0dd5b
+INVOCATION_ID = b0c3099848ae414ea1ef94242f8950ae
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -115,7 +115,7 @@ PWD = /home/quinton/Desktop/ApproximateDRAMandSRAM
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2308
+SSH_AGENT_PID = 2323
 # environment
 PKG_CONFIG_PATH = :/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig
 # environment
@@ -221,11 +221,11 @@ DBUS_STARTER_BUS_TYPE = session
 # environment
 QT4_IM_MODULE = fcitx
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/66a51c4f_25a6_4a4e_90d9_7feb8c41e115
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/0f51d694_4807_4731_88ea_a198b12a2a7d
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.116
+GNOME_TERMINAL_SERVICE = :1.104
 # default
 SUFFIXES := 
 # environment
@@ -245,9 +245,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 5497
+VSCODE_PID = 9006
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=85f32f26210f4920d33a25fd63914858
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=2b03d23d1d2ca51ce308370f6391e669
 # variable set hash-table stats:
 # Load=119/1024=12%, Rehash=0, Collisions=20/141=14%
 
@@ -294,9 +294,6 @@ makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
-make: *** No rule to make target 'all'.  Stop.
-
 # Not a target:
 GNUmakefile:
 #  Implicit rule search has been done.
@@ -309,6 +306,9 @@ GNUmakefile:
 # VPATH Search Paths
 
 # No 'vpath' search paths.
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 
 # No general ('VPATH' variable) search path.
 
@@ -318,6 +318,6 @@ GNUmakefile:
 # strcache performance: lookups = 42 / hit rate = 7%
 # hash-table stats:
 # Load=39/8192=0%, Rehash=0, Collisions=1/42=2%
-# Finished Make data base on Thu Dec  8 10:18:57 2022
+# Finished Make data base on Thu Dec  8 21:57:37 2022
 
  

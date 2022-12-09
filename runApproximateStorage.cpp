@@ -125,6 +125,14 @@ void TruncatedFlipBits(std::bitset<8> &BinaryTemp)
   }
 }
 
+void CompleteTruncated(std::bitset<8> &BinaryTemp)
+{
+  for (u_int8_t i = 7 - K; i > 0; i--)
+  {
+    BinaryTemp.reset(i);
+  }
+}
+
 void DecodeFlipBits(std::bitset<8> &BinaryTemp)
 {
   if (BinaryTemp[0] == 0)
@@ -140,6 +148,12 @@ void ApproximateBinaryTemp(std::bitset<8> &BinaryTemp)
 {
   EncodeFlipBits(BinaryTemp);
   TruncatedFlipBits(BinaryTemp);
+}
+
+void CompleteApproximateBinaryTemp(std::bitset<8> &BinaryTemp)
+{
+  EncodeFlipBits(BinaryTemp);
+  CompleteTruncated(BinaryTemp);
 }
 
 void DRAM_ApproximateStorage(cv::Mat &src, cv::Mat &dst, cv::Size dsize)
@@ -164,10 +178,39 @@ void DRAM_ApproximateStorage(cv::Mat &src, cv::Mat &dst, cv::Size dsize)
     // dram.WriteExcelBits((string)(EXCEL_NAME));
     fmt::print("DRAM高位比特数：{:d}\nDRAM总比特数：{:d} \nDRAM高位比特占比：{:f}\nDRAM单个像素平均含有的高位比特数：{:f}",
                dram.CountHighBits(), dram.GetAllBits(), dram.GetHighBitsPercentage(), dram.GetHighBitsAverage());
-    namedWindow("dst", WINDOW_AUTOSIZE);
-    imshow("dst", dst);
+    // namedWindow("dst", WINDOW_AUTOSIZE);
+    // imshow("dst", dst);
     imwrite(TEST_SAVE_PATH, dst);
-    waitKey(0);
+    // waitKey(0);
+  }
+}
+
+void DRAM_CompleteApproximateStorage(cv::Mat &src, cv::Mat &dst, cv::Size dsize)
+{
+  if (!src.empty())
+  {
+    imgPreProcessing(src, dst, dsize);
+    for (int row = 0; row < dst.rows; row++)
+    {
+      for (int col = 0; col < dst.cols; col++)
+      {
+        int v = dst.at<uchar>(row, col);
+        std::bitset<8> BinaryTemp(v);              // 八位二进制转换
+        CompleteApproximateBinaryTemp(BinaryTemp); // 近似操作
+        dram.StorageBits(BinaryTemp);
+        // DecodeFlipBits(BinaryTemp); // 解码
+        dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
+      }
+    }
+    dram.ShowStorageBits();
+    // dram.ShowGroupsBits();
+    // dram.WriteExcelBits((string)(EXCEL_NAME));
+    fmt::print("DRAM高位比特数：{:d}\nDRAM总比特数：{:d} \nDRAM高位比特占比：{:f}\nDRAM单个像素平均含有的高位比特数：{:f}",
+               dram.CountHighBits(),
+               dram.GetAllBits(),
+               dram.GetHighBitsPercentage(),
+               dram.GetHighBitsAverage());
+    imwrite(TEST_SAVE_PATH, dst);
   }
 }
 
@@ -197,7 +240,7 @@ void SRAM_ApproximateStorage(cv::Mat &src, cv::Mat &dst, cv::Size dsize)
             sram.CalculateFlipBits(StorageLoopTimes, sram.SRAM_storageSizeByte);
           }
         }
-        else if (sram.StorageLoopTimes_flag == StorageLoopTimes) //最后一次循环
+        else if (sram.StorageLoopTimes_flag == StorageLoopTimes) // 最后一次循环
         {
           if (storageSizeFmod == 0)
           {
@@ -225,6 +268,63 @@ void SRAM_ApproximateStorage(cv::Mat &src, cv::Mat &dst, cv::Size dsize)
     imshow("dst", dst);
     imwrite(TEST_SAVE_PATH, dst);
     waitKey(0);
+  }
+}
+
+void SRAM_CompleteApproximateStorage(cv::Mat &src, cv::Mat &dst, cv::Size dsize)
+{
+  u_int32_t StorageLoopTimes = ceil((double)(IMAGE_WIDTH * IMAGE_WIDTH) / (double)(sram.SRAM_storageSizeByte)); // 存储次数
+  u_int32_t storageSizeFmod = (IMAGE_WIDTH * IMAGE_WIDTH) % (sram.SRAM_storageSizeByte);
+  // fmt::print("{:d} {:d}", StorageLoopTimes, storageSizeFmod); //right
+  if (!src.empty())
+  {
+    imgPreProcessing(src, dst, dsize);
+    for (int row = 0; row < dst.rows; row++)
+    {
+      for (int col = 0; col < dst.cols; col++)
+      {
+        int v = dst.at<uchar>(row, col);
+        std::bitset<8> BinaryTemp(v);              // 八位二进制转换
+        CompleteApproximateBinaryTemp(BinaryTemp); // 近似操作
+
+        if (sram.StorageLoopTimes_flag < StorageLoopTimes) // 非最后一次循环情况
+        {
+          // fmt::print("{:d}", storageSizeFmod); // 正常
+          if (sram.SRAM_Bits.size() < sram.SRAM_storageSizeByte)
+          {
+            // fmt::print("{:d}", storageSizeFmod); // 正常
+            sram.StorageBits(BinaryTemp, sram.SRAM_storageSizeByte);
+            sram.CalculateFlipBits(StorageLoopTimes, sram.SRAM_storageSizeByte);
+          }
+        }
+        else if (sram.StorageLoopTimes_flag == StorageLoopTimes) // 最后一次循环
+        {
+          if (storageSizeFmod == 0)
+          {
+            if (sram.SRAM_Bits.size() < sram.SRAM_storageSizeByte)
+            {
+              sram.StorageBits(BinaryTemp, sram.SRAM_storageSizeByte);
+              sram.CalculateFlipBits(StorageLoopTimes, sram.SRAM_storageSizeByte);
+            }
+          }
+          else
+          {
+            if (sram.SRAM_Bits.size() < storageSizeFmod)
+            {
+              sram.StorageBits(BinaryTemp, storageSizeFmod);
+              sram.CalculateFlipBits(StorageLoopTimes, storageSizeFmod);
+            }
+          }
+        }
+        DecodeFlipBits(BinaryTemp); // 解码
+        dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
+      }
+    }
+    fmt::print("总翻转概率为：{:f}", sram.CalculateAllFlipProbability());
+    // namedWindow("dst", WINDOW_AUTOSIZE);
+    // imshow("dst", dst);
+    imwrite(TEST_SAVE_PATH, dst);
+    // waitKey(0);
   }
 }
 
@@ -301,7 +401,7 @@ void ImgCompression(cv::Mat &dst, const int &bits)
   imgTo8UC1(dst);
 }
 
-void PSNR_imgApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
+void PSNR_ImgApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
 {
   if (!src.empty())
   {
@@ -322,6 +422,35 @@ void PSNR_imgApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
 
     ImgCompression(dst, ROUNDPOINT);
     fmt::print("PSNR值为:{:f}", PSNR_computing(src, dst));
+  }
+}
+
+void PSNR_CompleteImgApproximate(cv::Mat &src, cv::Mat &dst, cv::Size &dsize)
+{
+  if (!src.empty())
+  {
+    // RAW_imgPreProcessing(src, dst, dsize);
+    imgPreProcessing(src, dst, dsize);
+    for (int row = 0; row < dst.rows; row++)
+    {
+      for (int col = 0; col < dst.cols; col++)
+      {
+        int v = dst.at<uchar>(row, col);
+        std::bitset<8> BinaryTemp(v);              // 八位二进制转换
+        CompleteApproximateBinaryTemp(BinaryTemp); // 完全截断近似操作
+        DecodeFlipBits(BinaryTemp);                // 解码
+        dst.at<uchar>(row, col) = (int)(BinaryTemp.to_ulong());
+      }
+    }
+    ImgCompression(dst, ROUNDPOINT);
+    fmt::print("PSNR值为:{:f}", PSNR_computing(src, dst));
+    imwrite(RESULT_SAVE_PATH +
+                to_string(PSNR_computing(src, dst)) +
+                "_complete_" +
+                to_string(K) +
+                "_" +
+                IMG_NAME,
+            dst);
   }
 }
 
