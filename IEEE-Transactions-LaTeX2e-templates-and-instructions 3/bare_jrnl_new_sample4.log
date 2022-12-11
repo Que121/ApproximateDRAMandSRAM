@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.7.11)  10 DEC 2022 09:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.7.11)  11 DEC 2022 14:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -390,9 +390,6 @@ File: Fig/Dataflow of typical image processing.png Graphic file (type png)
 Package pdftex.def Info: Fig/Dataflow of typical image processing.png  used on 
 input line 55.
 (pdftex.def)             Requested size: 252.0pt x 41.68916pt.
-
-LaTeX Warning: Citation `5523464' on page 1 undefined on input line 62.
-
 LaTeX Font Info:    Trying to load font information for U+msa on input line 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -490,14 +487,14 @@ File: Fig/Average PSNR with different K value.png Graphic file (type png)
 Package pdftex.def Info: Fig/Average PSNR with different K value.png  used on i
 nput line 181.
 (pdftex.def)             Requested size: 252.0pt x 199.19145pt.
-<Fig/PSNR value of images with proposed strategy.png, id=44, 383.7537pt x 228.0
-1186pt>
+<Fig/PSNR value of images with proposed strategy.png, id=44, 379.4175pt x 673.9
+1776pt>
 File: Fig/PSNR value of images with proposed strategy.png Graphic file (type pn
 g)
 <use Fig/PSNR value of images with proposed strategy.png>
 Package pdftex.def Info: Fig/PSNR value of images with proposed strategy.png  u
 sed on input line 187.
-(pdftex.def)             Requested size: 252.0pt x 149.72981pt.
+(pdftex.def)             Requested size: 252.0pt x 447.60468pt.
 [6 <./Fig/Flow chart for experimental simulation.png (PNG copy)> <./Fig/Average
  number of bit- `1' per pixel Navg for different value k.png> <./Fig/The switch
  probability for different value k.png>]
@@ -515,44 +512,36 @@ Package pdftex.def Info: Fig/SRAM approximation error model.png  used on input
 line 220.
 (pdftex.def)             Requested size: 252.0pt x 169.05804pt.
  [7 <./Fig/Average PSNR with different K value.png> <./Fig/PSNR value of images
- with proposed strategy.png> <./Fig/Selective reduction in supply voltage.png (
-PNG copy)> <./Fig/SRAM approximation error model.png>] (./bare_jrnl_new_sample4
-.bbl [8]) [9
-
-]
-(./bare_jrnl_new_sample4.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ with proposed strategy.png>] [8 <./Fig/Selective reduction in supply voltage.p
+ng (PNG copy)> <./Fig/SRAM approximation error model.png>] (./bare_jrnl_new_sam
+ple4.bbl) [9]
+(./bare_jrnl_new_sample4.aux) ) 
 Here is how much of TeX's memory you used:
- 4324 strings out of 481239
- 70198 string characters out of 5920377
- 318771 words of memory out of 5000000
+ 4323 strings out of 481239
+ 70192 string characters out of 5920377
+ 318775 words of memory out of 5000000
  19495 multiletter control sequences out of 15000+600000
- 579453 words of font info for 113 fonts, out of 8000000 for 9000
+ 578346 words of font info for 112 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  41i,11n,49p,2662b,427s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
-r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl_new_sample4.pdf (9 pages, 4306321 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/b
+ase/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/times/utmri8a.pfb>
+Output written on bare_jrnl_new_sample4.pdf (9 pages, 1477565 bytes).
 PDF statistics:
  121 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream

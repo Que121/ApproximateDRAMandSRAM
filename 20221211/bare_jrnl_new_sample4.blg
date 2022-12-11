@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: bare_jrnl_new_sample4.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: reference.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--missing school in miao2014modeling
+
+Done.
+You've used 19 entries,
+            4087 wiz_defined-function locations,
+            937 strings with 11705 characters,
+and the built_in function-call counts, 16637 in all, are:
+= -- 1292
+> -- 465
+< -- 129
++ -- 255
+- -- 87
+* -- 803
+:= -- 2334
+add.period$ -- 39
+call.type$ -- 19
+change.case$ -- 17
+chr.to.int$ -- 297
+cite$ -- 20
+duplicate$ -- 1173
+empty$ -- 1362
+format.name$ -- 105
+if$ -- 3970
+int.to.chr$ -- 0
+int.to.str$ -- 19
+missing$ -- 216
+newline$ -- 86
+num.names$ -- 19
+pop$ -- 524
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 1314
+stack$ -- 0
+substring$ -- 756
+swap$ -- 984
+text.length$ -- 30
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 19
+warning$ -- 1
+while$ -- 61
+width$ -- 21
+write$ -- 212
+(There was 1 warning)

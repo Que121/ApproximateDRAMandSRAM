@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Dec  8 21:57:37 2022
+# Make data base, printed on Sat Dec 10 13:37:48 2022
 
 # Variables
 
@@ -45,7 +45,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"cc0490d1397af23dc5bf44a96fe15dbb.zh-cn","_translationsConfigFile":"/home/quinton/.config/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/tcf.json","_cacheRoot":"/home/quinton/.config/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn","_resolvedLanguagePackCoreLocation":"/home/quinton/.config/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/e4503b30fc78200f846c62cf8091b76ff5547662","_corruptedFile":"/home/quinton/.config/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:61617
+JOURNAL_STREAM = 8:62476
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile
@@ -61,11 +61,11 @@ MAKELEVEL := 0
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=2b03d23d1d2ca51ce308370f6391e669
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=74c01e74dd67fd37d386d05163941abf
 # environment
 _ = /usr/bin/code
 # environment
-MANAGERPID = 2085
+MANAGERPID = 2106
 # environment
 ROS_PYTHON_VERSION = 3
 # environment
@@ -87,7 +87,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/quinton-Blade-14-RZ09-0370:@/tmp/.ICE-unix/2368,unix/quinton-Blade-14-RZ09-0370:/tmp/.ICE-unix/2368
+SESSION_MANAGER = local/quinton-Blade-14-RZ09-0370:@/tmp/.ICE-unix/2387,unix/quinton-Blade-14-RZ09-0370:/tmp/.ICE-unix/2387
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -95,7 +95,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = b0c3099848ae414ea1ef94242f8950ae
+INVOCATION_ID = 0eff9cd123174a398ca0652359b80e98
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -115,7 +115,7 @@ PWD = /home/quinton/Desktop/ApproximateDRAMandSRAM
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2323
+SSH_AGENT_PID = 2342
 # environment
 PKG_CONFIG_PATH = :/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig
 # environment
@@ -221,11 +221,11 @@ DBUS_STARTER_BUS_TYPE = session
 # environment
 QT4_IM_MODULE = fcitx
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/0f51d694_4807_4731_88ea_a198b12a2a7d
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/48d94e84_0049_477d_bc70_21c711d224c7
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.104
+GNOME_TERMINAL_SERVICE = :1.100
 # default
 SUFFIXES := 
 # environment
@@ -245,9 +245,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 9006
+VSCODE_PID = 3667
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=2b03d23d1d2ca51ce308370f6391e669
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=74c01e74dd67fd37d386d05163941abf
 # variable set hash-table stats:
 # Load=119/1024=12%, Rehash=0, Collisions=20/141=14%
 
@@ -257,9 +257,9 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=2b03d23d1d2ca51ce308370
 
 # Directories
 
-# . (device 66311, inode 7210457): 31 files, no impossibilities.
+# . (device 66311, inode 7210457): 36 files, no impossibilities.
 
-# 31 files, no impossibilities in 1 directories.
+# 36 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -278,6 +278,9 @@ all:
 Makefile:
 #  Implicit rule search has been done.
 #  File does not exist.
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 #  File has been updated.
 #  Failed to be updated.
 
@@ -306,18 +309,15 @@ GNUmakefile:
 # VPATH Search Paths
 
 # No 'vpath' search paths.
- 
-make: *** No rule to make target 'all'.  Stop.
-
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 39 / storage = 571 B / avg = 14 B
-# current buf: size = 8162 B / used = 571 B / count = 39 / avg = 14 B
+# strcache buffers: 1 (0) / strings = 44 / storage = 695 B / avg = 15 B
+# current buf: size = 8162 B / used = 695 B / count = 44 / avg = 15 B
 
-# strcache performance: lookups = 42 / hit rate = 7%
+# strcache performance: lookups = 47 / hit rate = 6%
 # hash-table stats:
-# Load=39/8192=0%, Rehash=0, Collisions=1/42=2%
-# Finished Make data base on Thu Dec  8 21:57:37 2022
+# Load=44/8192=1%, Rehash=0, Collisions=1/47=2%
+# Finished Make data base on Sat Dec 10 13:37:48 2022
 
  

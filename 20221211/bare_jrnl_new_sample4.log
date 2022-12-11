@@ -1,0 +1,616 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.7.11)  11 DEC 2022 16:10
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**bare_jrnl_new_sample4.tex
+(./bare_jrnl_new_sample4.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen134
+\@IEEEtrantmpdimenB=\dimen135
+\@IEEEtrantmpdimenC=\dimen136
+\@IEEEtrantmpcountA=\count167
+\@IEEEtrantmpcountB=\count168
+\@IEEEtrantmpcountC=\count169
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
+03.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen137
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen138
+\CLASSINFOnormalsizeunitybaselineskip=\dimen139
+\IEEEnormaljot=\dimen140
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen141
+\IEEEquantizedlengthdiff=\dimen142
+\IEEEquantizedtextheightdiff=\dimen143
+\IEEEilabelindentA=\dimen144
+\IEEEilabelindentB=\dimen145
+\IEEEilabelindent=\dimen146
+\IEEEelabelindent=\dimen147
+\IEEEdlabelindent=\dimen148
+\IEEElabelindent=\dimen149
+\IEEEiednormlabelsep=\dimen150
+\IEEEiedmathlabelsep=\dimen151
+\IEEEiedtopsep=\skip47
+\c@section=\count170
+\c@subsection=\count171
+\c@subsubsection=\count172
+\c@paragraph=\count173
+\c@IEEEsubequation=\count174
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\c@figure=\count175
+\c@table=\count176
+\@IEEEeqnnumcols=\count177
+\@IEEEeqncolcnt=\count178
+\@IEEEsubeqnnumrollback=\count179
+\@IEEEquantizeheightA=\dimen152
+\@IEEEquantizeheightB=\dimen153
+\@IEEEquantizeheightC=\dimen154
+\@IEEEquantizeprevdepth=\dimen155
+\@IEEEquantizemultiple=\count180
+\@IEEEquantizeboxA=\box45
+\@IEEEtmpitemindent=\dimen156
+\IEEEPARstartletwidth=\dimen157
+\c@IEEEbiography=\count181
+\@IEEEtranrubishbin=\box46
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen158
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen159
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count182
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count183
+\leftroot@=\count184
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count185
+\DOTSCASE@=\count186
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen160
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count187
+\c@MaxMatrixCols=\count188
+\dotsspace@=\muskip16
+\c@parentequation=\count189
+\dspbrk@lvl=\count190
+\tag@help=\toks16
+\row@=\count191
+\column@=\count192
+\maxfields@=\count193
+\andhelp@=\toks17
+\eqnshift@=\dimen161
+\alignsep@=\dimen162
+\tagshift@=\dimen163
+\tagwidth@=\dimen164
+\totwidth@=\dimen165
+\lineht@=\dimen166
+\@envbody=\toks18
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+\c@ALC@unique=\count194
+\c@ALC@line=\count195
+\c@ALC@rem=\count196
+\c@ALC@depth=\count197
+\ALC@tlm=\skip53
+\algorithmicindent=\skip54
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count198
+\float@exts=\toks21
+\float@box=\box49
+\@float@everytoks=\toks22
+\@floatcapt=\box50
+)
+\@float@every@algorithm=\toks23
+\c@algorithm=\count199
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen167
+\ar@mcellbox=\box51
+\extrarowheight=\dimen168
+\NC@list=\toks24
+\extratabsurround=\skip55
+\backup@length=\skip56
+\ar@cellbox=\box52
+)
+(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen169
+\captionmargin@=\dimen170
+\captionwidth=\dimen171
+\caption@tempdima=\dimen172
+\caption@indent=\dimen173
+\caption@parindent=\dimen174
+\caption@hangindent=\dimen175
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
+ {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
+nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
+e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
+malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
+ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
+ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
+\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
+\fi  on input line 1082.
+)
+\c@KVtest=\count266
+\sf@farskip=\skip57
+\sf@captopadj=\dimen176
+\sf@capskip=\skip58
+\sf@nearskip=\skip59
+\c@subfigure=\count267
+\c@subfigure@save=\count268
+\c@lofdepth=\count269
+\c@subtable=\count270
+\c@subtable@save=\count271
+\c@lotdepth=\count272
+\sf@top=\skip60
+\sf@bottom=\skip61
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/sttools/stfloats.sty
+Package: stfloats 2017/03/27 v3.3 Improve float mechanism and baselineskip sett
+ings
+\@dblbotnum=\count273
+\c@dblbotnumber=\count274
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks25
+\verbatim@line=\toks26
+\verbatim@in@stream=\read2
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen177
+\Gin@req@width=\dimen178
+)
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box53
+\UL@hyphenbox=\box54
+\UL@skip=\skip62
+\UL@hook=\toks27
+\UL@height=\dimen179
+\UL@pe=\count275
+\UL@pixel=\dimen180
+\ULC@box=\box55
+Package: ulem 2019/11/18
+\ULdepth=\dimen181
+)
+(/usr/share/texlive/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen182
+\c@nlinenum=\count276
+\TeXr@lab=\toks28
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count277
+\l__pdf_internal_box=\box56
+)
+
+LaTeX Warning: Unused global option(s):
+    [lettersize].
+
+(./bare_jrnl_new_sample4.aux
+
+LaTeX Warning: Label `fig9' multiply defined.
+
+
+LaTeX Warning: Label `fig10' multiply defined.
+
+)
+\openout1 = `bare_jrnl_new_sample4.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+
+-- Lines per column: 58 (exact).
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count278
+\scratchdimen=\dimen183
+\scratchbox=\box57
+\nofMPsegments=\count279
+\nofMParguments=\count280
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count281
+\MPscratchDim=\dimen184
+\MPnumerator=\count282
+\makeMPintoPDFobject=\count283
+\everyMPtoPDFconversion=\toks30
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Underfull \hbox (badness 7631) in paragraph at lines 48--50
+[]\OT1/ptm/b/it/9 Index Terms\OT1/ptm/b/n/9 ---Approximate stor-age, em-bed-ded
+ sys-tem,
+ []
+
+<Fig/Dataflow of typical image processing.png, id=1, 292.6935pt x 48.4209pt>
+File: Fig/Dataflow of typical image processing.png Graphic file (type png)
+<use Fig/Dataflow of typical image processing.png>
+Package pdftex.def Info: Fig/Dataflow of typical image processing.png  used on 
+input line 56.
+(pdftex.def)             Requested size: 252.0pt x 41.68916pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./Fig/Dataflow of typical image processing.png (PNG copy)>]
+<Fig/(a) circuit scheme of one bitcell in DRAM.png, id=11, 134.78355pt x 131.17
+004pt>
+File: Fig/(a) circuit scheme of one bitcell in DRAM.png Graphic file (type png)
+
+<use Fig/(a) circuit scheme of one bitcell in DRAM.png>
+Package pdftex.def Info: Fig/(a) circuit scheme of one bitcell in DRAM.png  use
+d on input line 70.
+(pdftex.def)             Requested size: 206.39685pt x 200.86562pt.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 7
+0.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+<Fig/(b) circuit scheme of one bitcell in SRAM.png, id=12, 152.12836pt x 130.80
+87pt>
+File: Fig/(b) circuit scheme of one bitcell in SRAM.png Graphic file (type png)
+
+<use Fig/(b) circuit scheme of one bitcell in SRAM.png>
+Package pdftex.def Info: Fig/(b) circuit scheme of one bitcell in SRAM.png  use
+d on input line 72.
+(pdftex.def)             Requested size: 206.39685pt x 177.4743pt.
+
+[2 <./Fig/(a) circuit scheme of one bitcell in DRAM.png (PNG copy)> <./Fig/(b) 
+circuit scheme of one bitcell in SRAM.png (PNG copy)>] [3]
+<Fig/Encoding scheme for the high part.png, id=29, 284.38245pt x 212.11246pt>
+File: Fig/Encoding scheme for the high part.png Graphic file (type png)
+<use Fig/Encoding scheme for the high part.png>
+Package pdftex.def Info: Fig/Encoding scheme for the high part.png  used on inp
+ut line 109.
+(pdftex.def)             Requested size: 252.0pt x 187.96062pt.
+<Fig/Illustration of the proposed strategy.png, id=30, 206.6922pt x 393.8715pt>
+
+File: Fig/Illustration of the proposed strategy.png Graphic file (type png)
+<use Fig/Illustration of the proposed strategy.png>
+Package pdftex.def Info: Fig/Illustration of the proposed strategy.png  used on
+ input line 118.
+(pdftex.def)             Requested size: 189.0pt x 360.1605pt.
+<Fig/Proposed data analysis method.png, id=31, 263.7855pt x 196.93575pt>
+File: Fig/Proposed data analysis method.png Graphic file (type png)
+<use Fig/Proposed data analysis method.png>
+Package pdftex.def Info: Fig/Proposed data analysis method.png  used on input l
+ine 129.
+(pdftex.def)             Requested size: 252.0pt x 188.13661pt.
+
+Underfull \vbox (badness 1490) has occurred while \output is active []
+
+ [4 <./Fig/Encoding scheme for the high part.png (PNG copy)> <./Fig/Illustratio
+n of the proposed strategy.png>]
+<Fig/Circuit implementation for dropping method.png, id=35, 3932.6925pt x 2265.
+46375pt>
+File: Fig/Circuit implementation for dropping method.png Graphic file (type png
+)
+<use Fig/Circuit implementation for dropping method.png>
+Package pdftex.def Info: Fig/Circuit implementation for dropping method.png  us
+ed on input line 143.
+(pdftex.def)             Requested size: 252.0pt x 145.15166pt.
+ [5 <./Fig/Proposed data analysis method.png (PNG copy)> <./Fig/Circuit impleme
+ntation for dropping method.png>]
+Underfull \hbox (badness 1418) in paragraph at lines 173--174
+\OT1/ptm/m/n/10 struc-ture is not mod-i-fied and the method is sim-ple to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
+\OT1/ptm/m/n/10 im-ple-ment, re-quir-ing no sys-tem mod-i-fi-ca-tions. More
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
+
+ []
+
+<Fig/MPEG-2.png, id=42, 576.35326pt x 329.5512pt>
+File: Fig/MPEG-2.png Graphic file (type png)
+<use Fig/MPEG-2.png>
+Package pdftex.def Info: Fig/MPEG-2.png  used on input line 182.
+(pdftex.def)             Requested size: 252.0pt x 144.08777pt.
+<Fig/Flow chart for experimental simulation.png, id=43, 349.0641pt x 167.6664pt
+>
+File: Fig/Flow chart for experimental simulation.png Graphic file (type png)
+<use Fig/Flow chart for experimental simulation.png>
+Package pdftex.def Info: Fig/Flow chart for experimental simulation.png  used o
+n input line 189.
+(pdftex.def)             Requested size: 252.0pt x 121.04205pt.
+<Fig/Average number of bit- `1' per pixel Navg for different value k.png, id=44
+, 320.1561pt x 201.6333pt>
+File: Fig/Average number of bit- `1' per pixel Navg for different value k.png G
+raphic file (type png)
+<use Fig/Average number of bit- `1' per pixel Navg for different value k.png>
+Package pdftex.def Info: Fig/Average number of bit- `1' per pixel Navg for diff
+erent value k.png  used on input line 199.
+(pdftex.def)             Requested size: 252.0pt x 158.71321pt.
+
+Underfull \hbox (badness 2680) in paragraph at lines 196--203
+[]|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+<Fig/The switch probability for different value k.png, id=45, 404.9529pt x 218.
+9781pt>
+File: Fig/The switch probability for different value k.png Graphic file (type p
+ng)
+<use Fig/The switch probability for different value k.png>
+Package pdftex.def Info: Fig/The switch probability for different value k.png  
+used on input line 207.
+(pdftex.def)             Requested size: 252.0pt x 136.27289pt.
+[6 <./Fig/MPEG-2.png (PNG copy)> <./Fig/Flow chart for experimental simulation.
+png (PNG copy)> <./Fig/Average number of bit- `1' per pixel Navg for different 
+value k.png>]
+<Fig/Average PSNR with different K value.png, id=51, 367.8543pt x 290.7663pt>
+File: Fig/Average PSNR with different K value.png Graphic file (type png)
+<use Fig/Average PSNR with different K value.png>
+Package pdftex.def Info: Fig/Average PSNR with different K value.png  used on i
+nput line 217.
+(pdftex.def)             Requested size: 252.0pt x 199.19145pt.
+<Fig/PSNR value of images with proposed strategy.png, id=52, 379.4175pt x 673.9
+1776pt>
+File: Fig/PSNR value of images with proposed strategy.png Graphic file (type pn
+g)
+<use Fig/PSNR value of images with proposed strategy.png>
+Package pdftex.def Info: Fig/PSNR value of images with proposed strategy.png  u
+sed on input line 223.
+(pdftex.def)             Requested size: 252.0pt x 447.60468pt.
+<Fig/PSNR value of images with complete dropping method.png, id=53, 377.9721pt 
+x 673.19505pt>
+File: Fig/PSNR value of images with complete dropping method.png Graphic file (
+type png)
+<use Fig/PSNR value of images with complete dropping method.png>
+Package pdftex.def Info: Fig/PSNR value of images with complete dropping method
+.png  used on input line 229.
+(pdftex.def)             Requested size: 252.0pt x 448.82983pt.
+
+Underfull \vbox (badness 1824) has occurred while \output is active []
+
+<Fig/Selective reduction in supply voltage.png, id=54, 231.62535pt x 99.0099pt>
+
+File: Fig/Selective reduction in supply voltage.png Graphic file (type png)
+<use Fig/Selective reduction in supply voltage.png>
+Package pdftex.def Info: Fig/Selective reduction in supply voltage.png  used on
+ input line 242.
+(pdftex.def)             Requested size: 252.0pt x 107.72525pt.
+<Fig/SRAM approximation error model.png, id=55, 326.4195pt x 218.9781pt>
+File: Fig/SRAM approximation error model.png Graphic file (type png)
+<use Fig/SRAM approximation error model.png>
+Package pdftex.def Info: Fig/SRAM approximation error model.png  used on input 
+line 265.
+(pdftex.def)             Requested size: 252.0pt x 169.05804pt.
+ [7 <./Fig/The switch probability for different value k.png> <./Fig/Average PSN
+R with different K value.png>] [8 <./Fig/PSNR value of images with proposed str
+ategy.png> <./Fig/PSNR value of images with complete dropping method.png>]
+Overfull \hbox (11.66988pt too wide) in paragraph at lines 368--389
+ [] 
+ []
+
+(./bare_jrnl_new_sample4.bbl
+Underfull \vbox (badness 6220) has occurred while \output is active []
+
+ [9 <./Fig/Selective reduction in supply voltage.png (PNG copy)> <./Fig/SRAM ap
+proximation error model.png>]) [10
+
+] (./bare_jrnl_new_sample4.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4497 strings out of 481239
+ 72611 string characters out of 5920377
+ 327644 words of memory out of 5000000
+ 19662 multiletter control sequences out of 15000+600000
+ 578346 words of font info for 112 fonts, out of 8000000 for 9000
+ 1145 hyphenation exceptions out of 8191
+ 41i,18n,49p,2662b,427s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmext
+ra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb
+i8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_jrnl_new_sample4.pdf (10 pages, 2764963 bytes).
+PDF statistics:
+ 136 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+
